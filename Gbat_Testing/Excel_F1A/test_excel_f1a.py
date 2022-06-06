@@ -8,10 +8,10 @@ from openpyxl.worksheet import worksheet
 @pytest.fixture
 def get_workbook() -> Workbook:
     """
-    Setup F1A workbook as fixture for
+    Load the excel file to test on
     :return: Workbook object for F1A batch jobs
     """
-    return xl.load_workbook(filename=r"C:\MyFiles\VSprojects\gbat\Gbat_Testing\Excel_F1A\F1A.xlsx")
+    return xl.load_workbook(filename=r"C:\MyFiles\VSprojects\Gbat-Testing\Gbat_Testing\Excel_F1A\F1A.xlsx")
 
 
 @pytest.fixture
@@ -81,12 +81,52 @@ def get_expected_output_tbl() -> list[list[str]]:
     ]
 
 
+@pytest.fixture
+def get_expected_error_tbl() -> list[list[str]]:
+    """
+    Setup expected errata for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl"
+    :return: List of string lists, each representing row data. First row is column headers
+    """
+    return [
+        ["ID", "Function Code", "Borough Code", "Borough Name", "In ZIP Code", "Address Number", "Street or Place Name",
+         "Unit Input", "GRC", "Error Message", "Similar Name 1", "b7sc 1", "Similar Name 2", "b7sc 2", "Similar Name 3",
+         "b7sc 3", "Similar Name 4", "b7sc 4", "Similar Name 5", "b7sc 5", "Similar Name 6", "b7sc 6", "Similar Name 7",
+         "b7sc 7", "Similar Name 8", "b7sc 8", "Similar Name 9", "b7sc 9", "Similar Name 10", "b7sc 10"],
+        ["8", "1A", "er", "er", "", "err", "err", "", "99",
+         "INVALID BOROUGH CODE. MUST BE 1, 2, 3, 4 OR 5.", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+         "", "", "", "", ""],
+        ["9", "1A", "3", "Brooklyn", "951", "err3", "EE",
+         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?	ERROL MILLIARD WAY", "33703002", "", "", "", "", "", "",
+         "", "", "", "", "", "", "", "", "", "", "", ""],
+        ["10", "1A", "1", "Manhattan", "120", "bwa", "EE",
+         "'BWA' NOT RECOGNIZED.THERE ARE 003 SIMILAR NAMES.", "BWAY BR OVR HARLEM RIV VEHICULAR", "11361011",
+         "BWAY BR OVR HARLEM  IVER IRT", "11361012", "BW Y BRIDGE", "11361006", "", "", "", "", "", "", "", "", "", "",
+         "", "", "", ""]
+    ]
+
+
 # endregion
 
 # region F1A Tests
 def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
     expected: list[list[str]] = get_expected_output_tbl
     actual: worksheet = setup_f1a_output_tbl
+
+    r: int = 0  # row tracker
+    for row in actual.rows:
+        c: int = 0  # col tracker
+
+        for cell in row:
+            # print(f"{cell.value} | {expected[r][c]}")  # debug quick print
+            assert cell.value == expected[r][c]
+            c += 1
+
+        r += 1
+
+
+def test_error_f1a(get_expected_error_tbl, setup_f1a_error_tbl):
+    expected: list[list[str]] = get_expected_error_tbl
+    actual: worksheet = setup_f1a_error_tbl
 
     r: int = 0  # row tracker
     for row in actual.rows:
