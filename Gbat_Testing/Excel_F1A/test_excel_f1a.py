@@ -95,12 +95,12 @@ def get_expected_error_tbl() -> list[list[str]]:
         ["8", "1A", "er", "er", "", "err", "err", "", "99",
          "INVALID BOROUGH CODE. MUST BE 1, 2, 3, 4 OR 5.", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
          "", "", "", "", ""],
-        ["9", "1A", "3", "Brooklyn", "951", "err3", "EE",
-         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?	ERROL MILLIARD WAY", "33703002", "", "", "", "", "", "",
+        ["9", "1A", "3", "Brooklyn", "", "951", "err3", "", "EE",
+         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?", "ERROL MILLIARD WAY", "33703002", "", "", "", "", "", "",
          "", "", "", "", "", "", "", "", "", "", "", ""],
-        ["10", "1A", "1", "Manhattan", "120", "bwa", "EE",
-         "'BWA' NOT RECOGNIZED.THERE ARE 003 SIMILAR NAMES.", "BWAY BR OVR HARLEM RIV VEHICULAR", "11361011",
-         "BWAY BR OVR HARLEM  IVER IRT", "11361012", "BW Y BRIDGE", "11361006", "", "", "", "", "", "", "", "", "", "",
+        ["10", "1A", "1", "Manhattan", "", "120", "bwa", "", "EE",
+         "'BWA' NOT RECOGNIZED. THERE ARE 003 SIMILAR NAMES.", "BWAY BR OVR HARLEM RIV VEHICULAR", "11361011",
+         "BWAY BR OVR HARLEM RIVER IRT", "11361012", "BWAY BRIDGE", "11361006", "", "", "", "", "", "", "", "", "", "",
          "", "", "", ""]
     ]
 
@@ -117,7 +117,7 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
         c: int = 0  # col tracker
 
         for cell in row:
-            # print(f"{cell.value} | {expected[r][c]}")  # debug quick print
+            # print(f"{cell.value} | [{r},{c}] {expected[r][c]}")  # debug quick print
             assert cell.value == expected[r][c]
             c += 1
 
@@ -133,7 +133,7 @@ def test_error_f1a(get_expected_error_tbl, setup_f1a_error_tbl):
         c: int = 0  # col tracker
 
         for cell in row:
-            # print(f"{cell.value} | {expected[r][c]}")  # debug quick print
+            # print(f"{cell.value} | [{r},{c}] {expected[r][c]}")  # debug quick print
             assert cell.value == expected[r][c]
             c += 1
 
