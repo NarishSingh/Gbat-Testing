@@ -1,12 +1,15 @@
 import json
-import pytest
+from dataclasses import dataclass
+from typing import List, Any
+
 import openpyxl as xl
+import pytest
+import requests as rq
 from openpyxl import Workbook
+from openpyxl.cell import Cell
 from openpyxl.worksheet import worksheet
 from requests import Response
-import requests as rq
-from dataclasses import dataclass
-import Excel_F1A
+
 from Excel_F1A.dto.F1A import F1A
 
 
@@ -124,7 +127,8 @@ def get_expected_output_tbl() -> list[F1A]:
         response: Response = rq.get(url + uri)
         if response.status_code == 200:
             f1a_json = json.loads(response.content)
-            response_list.append(F1A(f1a_json))
+            f1a: F1A = F1A(f1a_json)
+            response_list.append(f1a)
         else:
             print("Could not process request")
             print(f"{response.status_code} | {response.content}")
@@ -171,7 +175,7 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
     # setting up the expected and ideal/actual values
     expected: list[F1A] = get_expected_output_tbl
     actual: worksheet = setup_f1a_output_tbl
-    col_heads: list[str] = actual.rows[0]
+    col_heads: list[Any] = list(list(actual.rows)[0])
 
     # check all cells
     r: int = 0  # row tracker
@@ -180,9 +184,11 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
 
         for cell in row:
             expected_row = expected[r + 1]
-            print(f"{cell.value} | { getattr(expected_row, col_heads[c])}")
-            assert cell.value == getattr(expected_row, col_heads[c])
-            # print(f"{cell.value} | [{r},{c}] {expected[r][c]}")  # debug quick print
+            expected_col_head: Cell = col_heads[c]
+            expected_value = getattr(expected_row, expected_col_head.value)
+            print(f"{cell.value} | {expected_value}")
+            assert cell.value == expected_value
+            print(f"{cell.value} | [{r},{c}] {expected_value}")  # debug quick print
             c += 1
 
         r += 1

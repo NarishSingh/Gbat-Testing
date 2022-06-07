@@ -1,5 +1,7 @@
 class F1A:
     def __init__(self, response: dict):
+
+
         # region Non-Work Area Fields (root)
         self.out_b10sc_toString = response["root"]["out_b10sc_toString"]
         self.out_bbl_toString = response["root"]["out_bbl_toString"]
