@@ -73,6 +73,16 @@ def get_condo_lo_bbl(response) -> str:
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
+def get_dof_map(response) -> str:
+    dof: dict = response["root"]["wa2f1ax"]["dof_map"]
+    return f"{dof['boro']}{dof['section_volume']}{dof['page']}"
+
+
+def get_gridkey1(response) -> str:
+    gk1: dict = response["root"]["wa2f1ax"]["gridkey1"]
+    return f"{}"
+
+
 class F1A:
     def __init__(self, ID: str, input: f1a_input, response: dict):
         self.ID: str = ID
@@ -185,7 +195,7 @@ class F1A:
         self.cont_parity_ind: str = response["root"]["wa2f1ax"]["cont_parity_ind"]
         self.coop_num: str = response["root"]["wa2f1ax"]["coop_num"]
         self.corner_code: str = response["root"]["wa2f1ax"]["corner_code"]
-        self.dof_map: str = response["root"]["wa2f1ax"]["dof_map"]
+        self.dof_map: str = get_dof_map(response)
         self.filler1: str = response["root"]["wa2f1ax"]["filler1"]
         self.filler10: str = response["root"]["wa2f1ax"]["filler10"]
         self.filler11: str = response["root"]["wa2f1ax"]["filler11"]
@@ -198,7 +208,7 @@ class F1A:
         self.filler8: str = response["root"]["wa2f1ax"]["filler8"]
         self.filler9: str = response["root"]["wa2f1ax"]["filler9"]
         self.grc: str = response["root"]["wa2f1ax"]["grc"]
-        self.gridkey1: str = response["root"]["wa2f1ax"]["gridkey1"]
+        self.gridkey1: str = get_gridkey1(response)
         self.interior_flag: str = response["root"]["wa2f1ax"]["interior_flag"]
         self.irreg_flag: str = response["root"]["wa2f1ax"]["irreg_flag"]
         self.latitude: str = response["root"]["wa2f1ax"]["latitude"]
