@@ -69,14 +69,13 @@ def setup_f1a_complete_bins_tbl(get_workbook) -> worksheet:
     return f1a[bins_sheets[-1]]
 
 
-"""
 @pytest.fixture
 def get_expected_output_tbl() -> list[list[str]]:
-    "","
+    """
     Setup expected results for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl" from the output
     tbl
     :return: List of string lists, each representing row data. First row is column headers
-    "","
+    """
     return [
         # tbl head
         ["ID", "boro", "addrNo", "stName", "out_grc", "bbl"],
@@ -89,9 +88,9 @@ def get_expected_output_tbl() -> list[list[str]]:
         ["6", "3", "20", "Fort Greene Pl", "00", "3020970048"],
         ["7", "3", "620", "Atlantic Ave", "00", "3011180001"]
     ]
+
+
 """
-
-
 @dataclass
 class f1a_input:
     boro: str
@@ -101,6 +100,7 @@ class f1a_input:
 
 @pytest.fixture
 def get_expected_output_tbl() -> list[F1A]:
+    response_list: list[F1A] = []
     url: str = f"https://geoservice.planning.nyc.gov/geoservice/geoservice.svc/"
     key: str = "qQBPqfVDqJ3ZFJrS"
 
@@ -125,14 +125,14 @@ def get_expected_output_tbl() -> list[F1A]:
         if response.status_code == 200:
             f1a_json = json.loads(response.content)
 
-            f1a: F1A = F1A(f1a_json)
-            # print(f1a)  # debug
-            # print(f"BBL = {f1a.out_bbl}")
+            response_list.append(F1A(f1a_json))
         else:
             print("Could not process request")
             print(f"{response.status_code} | {response.content}")
 
         # todo push response to list
+        
+"""
 
 
 @pytest.fixture
