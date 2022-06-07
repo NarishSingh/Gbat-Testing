@@ -1,14 +1,13 @@
 import json
-
 import pytest
 import openpyxl as xl
 from openpyxl import Workbook
 from openpyxl.worksheet import worksheet
 from requests import Response
-
-from dto import F1A
 import requests as rq
 from dataclasses import dataclass
+import Excel_F1A
+from Excel_F1A.dto.F1A import F1A
 
 
 # region ARRANGE
@@ -69,13 +68,14 @@ def setup_f1a_complete_bins_tbl(get_workbook) -> worksheet:
     return f1a[bins_sheets[-1]]
 
 
+"""
 @pytest.fixture
 def get_expected_output_tbl() -> list[list[str]]:
-    """
+    "\""
     Setup expected results for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl" from the output
     tbl
     :return: List of string lists, each representing row data. First row is column headers
-    """
+    "\""
     return [
         # tbl head
         ["ID", "boro", "addrNo", "stName", "out_grc", "bbl"],
@@ -88,9 +88,9 @@ def get_expected_output_tbl() -> list[list[str]]:
         ["6", "3", "20", "Fort Greene Pl", "00", "3020970048"],
         ["7", "3", "620", "Atlantic Ave", "00", "3011180001"]
     ]
-
-
 """
+
+
 @dataclass
 class f1a_input:
     boro: str
@@ -124,15 +124,12 @@ def get_expected_output_tbl() -> list[F1A]:
         response: Response = rq.get(url + uri)
         if response.status_code == 200:
             f1a_json = json.loads(response.content)
-
             response_list.append(F1A(f1a_json))
         else:
             print("Could not process request")
             print(f"{response.status_code} | {response.content}")
 
-        # todo push response to list
-        
-"""
+    return response_list
 
 
 @pytest.fixture
@@ -171,16 +168,21 @@ def get_expected_error_tbl() -> list[list[str]]:
 
 # region F1A Tests
 def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
-    expected: list[list[str]] = get_expected_output_tbl
+    # setting up the expected and ideal/actual values
+    expected: list[F1A] = get_expected_output_tbl
     actual: worksheet = setup_f1a_output_tbl
+    col_heads: list[str] = actual.rows[0]
 
+    # check all cells
     r: int = 0  # row tracker
     for row in actual.rows:
         c: int = 0  # col tracker
 
         for cell in row:
+            expected_row = expected[r + 1]
+            print(f"{cell.value} | { getattr(expected_row, col_heads[c])}")
+            assert cell.value == getattr(expected_row, col_heads[c])
             # print(f"{cell.value} | [{r},{c}] {expected[r][c]}")  # debug quick print
-            assert cell.value == expected[r][c]
             c += 1
 
         r += 1
