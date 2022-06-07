@@ -2,6 +2,9 @@ import pytest
 import openpyxl as xl
 from openpyxl import Workbook
 from openpyxl.worksheet import worksheet
+from dto import F1A
+import requests as rq
+from dataclasses import dataclass
 
 
 # region ARRANGE
@@ -62,15 +65,18 @@ def setup_f1a_complete_bins_tbl(get_workbook) -> worksheet:
     return f1a[bins_sheets[-1]]
 
 
+"""
 @pytest.fixture
 def get_expected_output_tbl() -> list[list[str]]:
-    """
+    "","
     Setup expected results for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl" from the output
     tbl
     :return: List of string lists, each representing row data. First row is column headers
-    """
+    "","
     return [
+        # tbl head
         ["ID", "boro", "addrNo", "stName", "out_grc", "bbl"],
+        # return data
         ["1", "1", "120", "Broadway", "00", "1000477501"],
         ["2", "1", "140", "Broadway", "00", "1000480001"],
         ["3", "1", "695", "Park Ave", "00", "1014030001"],
@@ -79,6 +85,31 @@ def get_expected_output_tbl() -> list[list[str]]:
         ["6", "3", "20", "Fort Greene Pl", "00", "3020970048"],
         ["7", "3", "620", "Atlantic Ave", "00", "3011180001"]
     ]
+"""
+
+
+@dataclass
+class f1a_input:
+    boro: str
+    addrNo: str
+    stName: str
+
+
+@pytest.fixture
+def get_expected_output_tbl() -> list[F1A]:
+    input_tbl: dict = {
+        1: f1a_input("1", "120", "Broadway"),
+        2: f1a_input("1", "140", "Broadway"),
+        3: f1a_input("1", "695", "Park Ave"),
+        4: f1a_input("4", "90-15", "queens blv"),
+        5: f1a_input("4", "13118", "liberty ave"),
+        6: f1a_input("3", "20", "Fort Greene Place"),
+        7: f1a_input("3", "620", "Atlantic Ave"),
+        8: f1a_input("er", "err", "err"),
+        9: f1a_input("3", "951", "err3"),
+        10: f1a_input("1", "120", "bwa"),
+    }
+
 
 
 @pytest.fixture
@@ -88,19 +119,27 @@ def get_expected_error_tbl() -> list[list[str]]:
     :return: List of string lists, each representing row data. First row is column headers
     """
     return [
-        ["ID", "Function Code", "Borough Code", "Borough Name", "In ZIP Code", "Address Number", "Street or Place Name",
-         "Unit Input", "GRC", "Error Message", "Similar Name 1", "b7sc 1", "Similar Name 2", "b7sc 2", "Similar Name 3",
-         "b7sc 3", "Similar Name 4", "b7sc 4", "Similar Name 5", "b7sc 5", "Similar Name 6", "b7sc 6", "Similar Name 7",
+        # tbl head
+        ["ID", "Function Code", "Borough Code", "Borough Name", "In ZIP Code", "Address Number",
+         "Street or Place Name",
+         "Unit Input", "GRC", "Error Message", "Similar Name 1", "b7sc 1", "Similar Name 2", "b7sc 2",
+         "Similar Name 3",
+         "b7sc 3", "Similar Name 4", "b7sc 4", "Similar Name 5", "b7sc 5", "Similar Name 6", "b7sc 6",
+         "Similar Name 7",
          "b7sc 7", "Similar Name 8", "b7sc 8", "Similar Name 9", "b7sc 9", "Similar Name 10", "b7sc 10"],
+        # errata
         ["8", "1A", "er", "er", "", "err", "err", "", "99",
-         "INVALID BOROUGH CODE. MUST BE 1, 2, 3, 4 OR 5.", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+         "INVALID BOROUGH CODE. MUST BE 1, 2, 3, 4 OR 5.", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+         "",
          "", "", "", "", ""],
         ["9", "1A", "3", "Brooklyn", "", "951", "err3", "", "EE",
-         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?", "ERROL MILLIARD WAY", "33703002", "", "", "", "", "", "",
+         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?", "ERROL MILLIARD WAY", "33703002", "", "", "", "", "",
+         "",
          "", "", "", "", "", "", "", "", "", "", "", ""],
         ["10", "1A", "1", "Manhattan", "", "120", "bwa", "", "EE",
          "'BWA' NOT RECOGNIZED. THERE ARE 003 SIMILAR NAMES.", "BWAY BR OVR HARLEM RIV VEHICULAR", "11361011",
-         "BWAY BR OVR HARLEM RIVER IRT", "11361012", "BWAY BRIDGE", "11361006", "", "", "", "", "", "", "", "", "", "",
+         "BWAY BR OVR HARLEM RIVER IRT", "11361012", "BWAY BRIDGE", "11361006", "", "", "", "", "", "", "", "", "",
+         "",
          "", "", "", ""]
     ]
 
