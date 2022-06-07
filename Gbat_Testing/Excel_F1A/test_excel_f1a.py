@@ -1,7 +1,11 @@
+import json
+
 import pytest
 import openpyxl as xl
 from openpyxl import Workbook
 from openpyxl.worksheet import worksheet
+from requests import Response
+
 from dto import F1A
 import requests as rq
 from dataclasses import dataclass
@@ -97,6 +101,9 @@ class f1a_input:
 
 @pytest.fixture
 def get_expected_output_tbl() -> list[F1A]:
+    url: str = f"https://geoservice.planning.nyc.gov/geoservice/geoservice.svc/"
+    key: str = "qQBPqfVDqJ3ZFJrS"
+
     input_tbl: dict = {
         1: f1a_input("1", "120", "Broadway"),
         2: f1a_input("1", "140", "Broadway"),
@@ -110,6 +117,22 @@ def get_expected_output_tbl() -> list[F1A]:
         10: f1a_input("1", "120", "bwa"),
     }
 
+    k: int
+    v: f1a_input
+    for v in input_tbl.values():
+        uri = f"Function_1A?Borough={v.boro}&AddressNo={v.addrNo}&StreetName={v.stName}&DisplayFormat={False}&Key={key}"
+        response: Response = rq.get(url + uri)
+        if response.status_code == 200:
+            f1a_json = json.loads(response.content)
+
+            f1a: F1A = F1A(f1a_json)
+            # print(f1a)  # debug
+            # print(f"BBL = {f1a.out_bbl}")
+        else:
+            print("Could not process request")
+            print(f"{response.status_code} | {response.content}")
+
+        # todo push response to list
 
 
 @pytest.fixture
