@@ -122,12 +122,12 @@ def get_expected_output_tbl() -> list[F1A]:
 
     k: int
     v: f1a_input
-    for v in input_tbl.values():
+    for k, v in input_tbl.items():
         uri = f"Function_1A?Borough={v.boro}&AddressNo={v.addrNo}&StreetName={v.stName}&DisplayFormat={False}&Key={key}"
         response: Response = rq.get(url + uri)
         if response.status_code == 200:
             f1a_json = json.loads(response.content)
-            f1a: F1A = F1A(f1a_json)
+            f1a: F1A = F1A(str(k), v, f1a_json)
             response_list.append(f1a)
         else:
             print("Could not process request")
@@ -179,16 +179,17 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
 
     # check all cells
     r: int = 0  # row tracker
-    for row in actual.rows:
-        c: int = 0  # col tracker
+    for i, row in enumerate(actual.iter_rows()):
+        if i == 0:
+            continue
 
+        c: int = 0  # col tracker
+        cell: Cell
         for cell in row:
-            expected_row = expected[r + 1]
+            expected_row: F1A = expected[r]
             expected_col_head: Cell = col_heads[c]
-            expected_value = getattr(expected_row, expected_col_head.value)
-            print(f"{cell.value} | {expected_value}")
-            assert cell.value == expected_value
-            print(f"{cell.value} | [{r},{c}] {expected_value}")  # debug quick print
+            print(f"{cell.value} | [{r},{c}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
+            assert cell.value == getattr(expected_row, expected_col_head.value)
             c += 1
 
         r += 1
