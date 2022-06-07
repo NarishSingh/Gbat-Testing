@@ -8,28 +8,69 @@ class f1a_input:
     stName: str
 
 
-def get_in_bbl(response):
+def get_in_bbl(response) -> str:
     bbl: dict = response["root"]["wa1"]["in_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_out_bbl(response):
+def get_out_bbl(response) -> str:
     bbl: dict = response["root"]["wa1"]["out_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_bbl(response):
+def get_bbl(response) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_TPAD_new_bin(response):
+def get_TPAD_new_bin(response) -> str:
     new_bin: dict = response["root"]["wa2f1ax"]["TPAD_new_bin"]
     return f"{new_bin['boro']}{new_bin['binnum']}"
 
-def get_bid_id(response):
+
+def get_bid_id(response) -> str:
     bid: dict = response["root"]["wa2f1ax"]["bid_id"]
     return f"{bid['boro']}{bid['sc5']}"
+
+
+def get_in_bin(response) -> str:
+    bin: dict = response["root"]["wa1"]["in_bin"]
+    return f"{bin['boro']}{bin['binnum']}"
+
+
+def get_out_bin(response) -> str:
+    bin: dict = response["root"]["wa1"]["out_bin"]
+    return f"{bin['boro']}{bin['binnum']}"
+
+
+def get_bin(response) -> str:
+    bin: dict = response["root"]["wa2f1ax"]["bin"]
+    return f"{bin['boro']}{bin['binnum']}"
+
+
+def get_business_area(response) -> str:
+    ba: dict = response["root"]["wa2f1ax"]["business_area"]
+    return f"{ba['boro']}{ba['district_number']}"
+
+
+def get_condo_base_bbl(response) -> str:
+    bbl: dict = response["root"]["wa2f1ax"]["condo_base_bbl"]
+    return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
+
+
+def get_condo_bill_bbl(response) -> str:
+    bbl: dict = response["root"]["wa2f1ax"]["condo_bill_bbl"]
+    return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
+
+
+def get_condo_hi_bbl(response) -> str:
+    bbl: dict = response["root"]["wa2f1ax"]["condo_hi_bbl"]
+    return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
+
+
+def get_condo_lo_bbl(response) -> str:
+    bbl: dict = response["root"]["wa2f1ax"]["condo_lo_bbl"]
+    return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
 class F1A:
@@ -57,7 +98,7 @@ class F1A:
         self.in_b10sc2: str = response["root"]["wa1"]["in_b10sc2"]
         self.in_b10sc3: str = response["root"]["wa1"]["in_b10sc3"]
         self.in_bbl: str = get_in_bbl(response)
-        self.in_bin: str = response["root"]["wa1"]["in_bin"]
+        self.in_bin: str = get_in_bin(response)
         self.in_bin_string: str = response["root"]["wa1"]["in_bin_string"]
         self.in_boro1: str = response["root"]["wa1"]["in_boro1"]
         self.in_boro2: str = response["root"]["wa1"]["in_boro2"]
@@ -95,7 +136,7 @@ class F1A:
         self.out_b10sc2: str = response["root"]["wa1"]["out_b10sc2"]
         self.out_b10sc3: str = response["root"]["wa1"]["out_b10sc3"]
         self.out_bbl: str = get_out_bbl(response)
-        self.out_bin: str = response["root"]["wa1"]["out_bin"]
+        self.out_bin: str = get_out_bin(response)
         self.out_boro_name1: str = response["root"]["wa1"]["out_boro_name1"]
         self.out_error_message: str = response["root"]["wa1"]["out_error_message"]
         self.out_error_message2: str = response["root"]["wa1"]["out_error_message2"]
@@ -131,15 +172,15 @@ class F1A:
         self.TPAD_new_bin_status: str = response["root"]["wa2f1ax"]["TPAD_new_bin_status"]
         self.addr_overflow_flag: str = response["root"]["wa2f1ax"]["addr_overflow_flag"]
         self.bbl: str = get_bbl(response)
-        self.bid_id: str = self.get_bid_id(response)
-        self.bin: str = response["root"]["wa2f1ax"]["bin"]
-        self.business_area: str = response["root"]["wa2f1ax"]["business_area"]
-        self.condo_base_bbl: str = response["root"]["wa2f1ax"]["condo_base_bbl"]
-        self.condo_bill_bbl: str = response["root"]["wa2f1ax"]["condo_bill_bbl"]
+        self.bid_id: str = get_bid_id(response)
+        self.bin: str = get_bin(response)
+        self.business_area: str = get_business_area(response)
+        self.condo_base_bbl: str = get_condo_base_bbl(response)
+        self.condo_bill_bbl: str = get_condo_bill_bbl(response)
         self.condo_bill_scc: str = response["root"]["wa2f1ax"]["condo_bill_scc"]
         self.condo_flag: str = response["root"]["wa2f1ax"]["condo_flag"]
-        self.condo_hi_bbl: str = response["root"]["wa2f1ax"]["condo_hi_bbl"]
-        self.condo_lo_bbl: str = response["root"]["wa2f1ax"]["condo_lo_bbl"]
+        self.condo_hi_bbl: str = get_condo_hi_bbl(response)
+        self.condo_lo_bbl: str = get_condo_lo_bbl(response)
         self.condo_num: str = response["root"]["wa2f1ax"]["condo_num"]
         self.cont_parity_ind: str = response["root"]["wa2f1ax"]["cont_parity_ind"]
         self.coop_num: str = response["root"]["wa2f1ax"]["coop_num"]
