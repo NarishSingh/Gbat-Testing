@@ -1,0 +1,193 @@
+{
+    "display": null,
+    "root": {
+        "wa1": {
+            "in_auxseg_switch": " ",
+            "in_b10sc1": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc2": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc3": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "in_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "in_bin_string": "       ",
+            "in_boro1": "1",
+            "in_boro2": " ",
+            "in_boro3": " ",
+            "in_browse_flag": " ",
+            "in_compass_dir": " ",
+            "in_compass_dir2": " ",
+            "in_filler01": " ",
+            "in_filler03": "                                                                                  ",
+            "in_filler4": "                              ",
+            "in_func_code": "BF",
+            "in_hn_justification": " ",
+            "in_hn_norm_override": " ",
+            "in_hnd": "                ",
+            "in_hnl": "  ",
+            "in_hns": "           ",
+            "in_legacy_grc_flag": " ",
+            "in_long_wa2_flag": " ",
+            "in_low_hnd": "                ",
+            "in_low_hns": "           ",
+            "in_mode_switch": " ",
+            "in_node": "       ",
+            "in_platform_ind": " ",
+            "in_real_street_only": " ",
+            "in_roadbed_request_switch": " ",
+            "in_snl": "  ",
+            "in_stname1": "BROADWAY                        ",
+            "in_stname2": "                                ",
+            "in_stname3": "                                ",
+            "in_stname_normalization": " ",
+            "in_tpad_switch": " ",
+            "in_unit": "              ",
+            "in_xstreet_names_flag": " ",
+            "in_zip_code": "     ",
+            "out_attr_bytes": [
+                " ",
+                " ",
+                " "
+            ],
+            "out_b10sc1": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "13610",
+                "spv": "010"
+            },
+            "out_b10sc2": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "out_b10sc3": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "out_b7sc_list": [
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "13610"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "13",
+                    "sc5": "27310"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "13612"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "13613"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "06",
+                    "sc5": "13610"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "10680"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "10680"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "12",
+                    "sc5": "27310"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "11900"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "16",
+                    "sc5": "13610"
+                }
+            ],
+            "out_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "out_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "out_boro_name1": "MANHATTAN",
+            "out_error_message": "                                                                                ",
+            "out_error_message2": "                                                                                ",
+            "out_filler02": " ",
+            "out_filler03": "                 ",
+            "out_grc": "00",
+            "out_grc2": "  ",
+            "out_hnd": "                ",
+            "out_hns": "           ",
+            "out_low_hnd": "                ",
+            "out_low_hns": "           ",
+            "out_node": "       ",
+            "out_number_of_stcodes": "10",
+            "out_reason_code": " ",
+            "out_reason_code2": " ",
+            "out_reason_code_qualifier": " ",
+            "out_reason_code_qualifier2": " ",
+            "out_st_attr": " ",
+            "out_stname1": "BROADWAY                        ",
+            "out_stname2": "                                ",
+            "out_stname3": "                                ",
+            "out_stname_list": [
+                "BROADWAY                        ",
+                "BROADWAY    7 AVENUE LINE       ",
+                "BROADWAY ALLEY                  ",
+                "BROADWAY ATRIUM                 ",
+                "BROADWAY BRIDGE                 ",
+                "BROADWAY EN G WASHINGTON BRDG   ",
+                "BROADWAY G WASHINGTON BRIDGE EN ",
+                "BROADWAY LINE                   ",
+                "BROADWAY MALLS                  ",
+                "BROADWAY NB INNER ROADBED       "
+            ],
+            "out_unit": "              ",
+            "out_units": {
+                "unit_identifier": "          ",
+                "unit_type": "    "
+            },
+            "out_warning_code": "  ",
+            "out_warning_code2": "  "
+        }
+    }
+}

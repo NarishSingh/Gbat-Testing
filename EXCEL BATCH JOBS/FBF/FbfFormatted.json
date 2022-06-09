@@ -1,0 +1,64 @@
+{
+    "display": {
+        "FunctionBFList": [
+            {
+                "out_b7sc": "11361001",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY                        "
+            },
+            {
+                "out_b7sc": "12731013",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY    7 AVENUE LINE       "
+            },
+            {
+                "out_b7sc": "11361201",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY ALLEY                  "
+            },
+            {
+                "out_b7sc": "11361301",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY ATRIUM                 "
+            },
+            {
+                "out_b7sc": "11361006",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY BRIDGE                 "
+            },
+            {
+                "out_b7sc": "11068001",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY EN G WASHINGTON BRDG   "
+            },
+            {
+                "out_b7sc": "11068001",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY G WASHINGTON BRIDGE EN "
+            },
+            {
+                "out_b7sc": "12731012",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY LINE                   "
+            },
+            {
+                "out_b7sc": "11190001",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY MALLS                  "
+            },
+            {
+                "out_b7sc": "11361016",
+                "out_boro_name1": "MANHATTAN",
+                "out_stname1": "BROADWAY NB INNER ROADBED       "
+            }
+        ],
+        "in_boro": "1",
+        "in_func_code": "BF",
+        "in_stname1": "BROADWAY                        ",
+        "out_boro_name1": "MANHATTAN",
+        "out_error_message": "                                                                                ",
+        "out_grc": "00",
+        "out_reason_code": " "
+    },
+    "root": null
+}

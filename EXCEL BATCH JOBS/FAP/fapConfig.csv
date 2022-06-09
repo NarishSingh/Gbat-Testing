@@ -1,0 +1,46 @@
+FAP
+SelectedInputs
+SheetIndex,1
+RejectWarnings,True
+RejectThreshold,0.9
+UsingFreeform,False
+UsingHns,False
+StNameNormalization,InputStreetName
+BoroZipIdx,0
+AddrNoIdx,1
+StNameIdx,2
+UnitIdx,-1
+SheetTableNames
+AddrRangeTableName,TEST3
+OutputTableName,TEST1
+ErrorTableName,TEST2
+SelectedOutputs
+ap_id,WA2FAPX Fields
+bbl,WA2FAPX Fields
+bin,WA2FAPX Fields
+condo_bill_bbl,WA2FAPX Fields
+condo_flag,WA2FAPX Fields
+condo_hi_bbl,WA2FAPX Fields
+condo_lo_bbl,WA2FAPX Fields
+condo_num,WA2FAPX Fields
+cont_parity_ind,WA2FAPX Fields
+coop_num,WA2FAPX Fields
+filler1,WA2FAPX Fields
+filler10,WA2FAPX Fields
+filler2,WA2FAPX Fields
+filler3,WA2FAPX Fields
+filler4,WA2FAPX Fields
+filler5,WA2FAPX Fields
+filler6,WA2FAPX Fields
+filler7,WA2FAPX Fields
+filler8,WA2FAPX Fields
+filler9,WA2FAPX Fields
+gridkey1,WA2FAPX Fields
+latitude,WA2FAPX Fields
+lohns,WA2FAPX Fields
+longitude,WA2FAPX Fields
+num_of_addrs,WA2FAPX Fields
+num_of_bldgs,WA2FAPX Fields
+res_internal_use,WA2FAPX Fields
+x_coord,WA2FAPX Fields
+y_coord,WA2FAPX Fields

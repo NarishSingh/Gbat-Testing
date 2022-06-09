@@ -1,0 +1,24 @@
+F2
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.95
+UsingAuxNodes,False
+StNameNormalization,InputStreetName
+Boro1Idx,0
+StName1Idx,1
+Boro2Idx,2
+StName2Idx,3
+CompassIdx,-1
+NodeIdIdx,-1
+SheetTableNames
+OutputTableName,Outputs
+ErrorTableName,Errors
+GRC03TableName,GRC03_Error_F2
+SelectedOutputs
+ID,GRC03 Error Info
+Node #,GRC03 Error Info
+Cross Street #,GRC03 Error Info
+Node,GRC03 Error Info
+Street Name,GRC03 Error Info
+B7Sc,GRC03 Error Info

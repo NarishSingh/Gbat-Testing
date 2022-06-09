@@ -1,0 +1,31 @@
+F3S
+SelectedInputs
+SheetIndex,1
+RejectWarnings,True
+RejectThreshold,0.9
+UsingStCodes,True
+UsingRealStsOnly,False
+BoroIdx,0
+B10Sc1Idx,1
+B10Sc2Idx,2
+B10Sc3Idx,2
+StName1Idx,1
+StName2Idx,2
+StName3Idx,3
+Compass1Idx,-1
+Compass2Idx,-1
+SheetTableNames
+OutputTableName,ayLmao
+ErrorTableName,ayyLmaoo
+F3sTableName,ayyyLmaooo
+SelectedOutputs
+ID,Intersection List
+Intersection #,Intersection List
+node_num,Intersection List
+distance,Intersection List
+gap_flag,Intersection List
+mh_ri_flag,Intersection List
+xstr_cnt,Intersection List
+Node B7SC List,Intersection List
+f3skey,WA2F3S Fields
+num_of_intersections,WA2F3S Fields

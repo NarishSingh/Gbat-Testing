@@ -1,0 +1,106 @@
+{
+    "display": {
+        "AddressRangeKeys": [
+            {
+                "Key": "",
+                "Value": "Ordinary Address Range"
+            }
+        ],
+        "AddressRangeList": [
+            {
+                "b7sc": "45379001",
+                "bin": "4441705",
+                "high_address_number": "          131-18",
+                "low_address_number": "          131-18",
+                "street_name": "LIBERTY AVENUE                  ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            },
+            {
+                "b7sc": "45379001",
+                "bin": "4205037",
+                "high_address_number": "          131-14",
+                "low_address_number": "          131-14",
+                "street_name": "LIBERTY AVENUE                  ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            },
+            {
+                "b7sc": "45379001",
+                "bin": "4441704",
+                "high_address_number": "          131-16",
+                "low_address_number": "          131-16",
+                "street_name": "LIBERTY AVENUE                  ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            }
+        ],
+        "CompleteBINList": [
+            {
+                "bin": "4205037",
+                "tpad": null
+            },
+            {
+                "bin": "4441704",
+                "tpad": null
+            },
+            {
+                "bin": "4441705",
+                "tpad": null
+            }
+        ],
+        "SimilarNamesList": [],
+        "in_boro": "4",
+        "in_func_code": "1A",
+        "in_hnd": "13118           ",
+        "in_stname1": "LIBERTY AVE                     ",
+        "in_unit": "",
+        "out_TPAD_bin": "N\/A",
+        "out_TPAD_bin_status": "N\/A",
+        "out_TPAD_conflict_flag": "N\/A",
+        "out_bbl": "4095910006",
+        "out_bbl_block": "9591",
+        "out_bbl_lot": "6",
+        "out_bid": "",
+        "out_bin": "4441705",
+        "out_bin_status": "N\/A",
+        "out_boro_name1": "QUEENS   ",
+        "out_condo_base_bbl": "N\/A",
+        "out_condo_billing_bbl": "N\/A",
+        "out_condo_flag": "Non-Condo",
+        "out_condo_num": "N\/A",
+        "out_coop_num": "N\/A",
+        "out_corner_code": "  ",
+        "out_dcp_zoning_map": "18C",
+        "out_error_message": "ADDR NUMBER ALTERED: HYPHEN INSERTED                                            ",
+        "out_grc": "01",
+        "out_high_bbl_condo": "N\/A",
+        "out_hnd": "131-18          ",
+        "out_interior_flag": "Not Interior Lot",
+        "out_irreg_flag": "Not Irregular Lot",
+        "out_lat_property": "40.690240",
+        "out_lon_property": "-73.814133 ",
+        "out_low_bbl_condo": "N\/A",
+        "out_num_of_bldgs": "3",
+        "out_num_of_blockfaces": "1",
+        "out_reason_code": "2",
+        "out_rpad_bldg_class": "K1",
+        "out_rpad_scc": "6",
+        "out_sanborn_boro": "4",
+        "out_sanborn_page": "074 ",
+        "out_sanborn_volume": "06 ",
+        "out_stname1": "LIBERTY AVENUE                  ",
+        "out_tax_map": "4",
+        "out_tax_section": "41",
+        "out_tax_volume": "04",
+        "out_unit": "              ",
+        "out_vacant_flag": "Not Vacant",
+        "out_wa1_message": "ADDR NUMBER ALTERED: HYPHEN INSERTED                                            ",
+        "out_x_coord_property": "1035795",
+        "out_y_coord_property": "190804"
+    },
+    "root": null
+}

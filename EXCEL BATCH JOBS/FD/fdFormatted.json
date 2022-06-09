@@ -1,0 +1,50 @@
+{
+    "display": {
+        "StreetCodeList": [
+            {
+                "b10sc": {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "13610",
+                    "spv": "010"
+                },
+                "b10sc_toString": "11361001010",
+                "borough": "Manhattan",
+                "gft": "Unhyphenated",
+                "streetName": "BROADWAY                        "
+            },
+            {
+                "b10sc": {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "34050",
+                    "spv": "010"
+                },
+                "b10sc_toString": "13405001010",
+                "borough": "Manhattan",
+                "gft": "Unhyphenated",
+                "streetName": "WEST   14 STREET                "
+            },
+            {
+                "b10sc": {
+                    "boro": "1",
+                    "lgc": "04",
+                    "sc5": "10610",
+                    "spv": "010"
+                },
+                "b10sc_toString": "11061004010",
+                "borough": "Manhattan",
+                "gft": "Unhyphenated",
+                "streetName": "   7 AVENUE                     "
+            }
+        ],
+        "in_b10sc1": "11361001010",
+        "in_b10sc2": "13405001010",
+        "in_b10sc3": "11061004010",
+        "in_func_code": "DN",
+        "out_error_message": "                                                                                ",
+        "out_grc": "00",
+        "out_reason_code": " "
+    },
+    "root": null
+}

@@ -1,0 +1,20 @@
+F1N
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.7
+StNameLen,20
+UsingSortFormat,False
+UsingCompactFormat,True
+BoroIdx,0
+StNameIdx,1
+SheetTableNames
+OutputTableName,ayLmao
+ErrorTableName,ayyLmaoo
+SelectedOutputs
+out_stname1,WA1 Fields
+out_stname2,WA1 Fields
+out_stname3,WA1 Fields
+out_b10sc1,WA1 Fields
+out_b10sc2,WA1 Fields
+out_b10sc3,WA1 Fields

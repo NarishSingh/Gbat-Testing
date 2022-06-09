@@ -1,0 +1,26 @@
+F1A,
+SelectedInputs,
+UsingTpad,FALSE
+SheetIndex,0
+RejectWarnings,TRUE
+RejectThreshold,0.9
+UsingFreeform,FALSE
+UsingHns,FALSE
+StNameNormalization,PrincipalStreetName
+BoroZipIdx,0
+AddrNoIdx,1
+StNameIdx,2
+UnitIdx,-1
+SheetTableNames,
+AddrRangeTableName,TEST1
+BinListTableName,TEST2
+OutputTableName,TEST3
+ErrorTableName,TEST4
+SelectedOutputs,
+out_b10sc_toString,Non-Work Area Fields (root)
+out_bbl_toString,Non-Work Area Fields (root)
+out_bid_toString,Non-Work Area Fields (root)
+out_bin_toString,Non-Work Area Fields (root)
+out_business_area_toString,Non-Work Area Fields (root)
+out_dof_map_toString,Non-Work Area Fields (root)
+out_sanborn_toString,Non-Work Area Fields (root)

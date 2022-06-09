@@ -1,0 +1,445 @@
+{
+    "display": null,
+    "root": {
+        "wa1": {
+            "in_auxseg_switch": " ",
+            "in_b10sc1": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc2": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc3": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "in_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "in_bin_string": "       ",
+            "in_boro1": "1",
+            "in_boro2": "1",
+            "in_boro3": " ",
+            "in_browse_flag": " ",
+            "in_compass_dir": " ",
+            "in_compass_dir2": " ",
+            "in_filler01": " ",
+            "in_filler03": "                                                                                  ",
+            "in_filler4": "                              ",
+            "in_func_code": "2W",
+            "in_hn_justification": " ",
+            "in_hn_norm_override": " ",
+            "in_hnd": "                ",
+            "in_hnl": "  ",
+            "in_hns": "           ",
+            "in_legacy_grc_flag": " ",
+            "in_long_wa2_flag": " ",
+            "in_low_hnd": "                ",
+            "in_low_hns": "           ",
+            "in_mode_switch": " ",
+            "in_node": "       ",
+            "in_platform_ind": "C",
+            "in_real_street_only": " ",
+            "in_roadbed_request_switch": " ",
+            "in_snl": "  ",
+            "in_stname1": "BROADWAY                        ",
+            "in_stname2": "STONE STREET                    ",
+            "in_stname3": "                                ",
+            "in_stname_normalization": " ",
+            "in_tpad_switch": " ",
+            "in_unit": "              ",
+            "in_xstreet_names_flag": "E",
+            "in_zip_code": "     ",
+            "out_attr_bytes": [
+                " ",
+                " ",
+                " "
+            ],
+            "out_b10sc1": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "13610",
+                "spv": "010"
+            },
+            "out_b10sc2": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "31610",
+                "spv": "010"
+            },
+            "out_b10sc3": {
+                "boro": " ",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "out_b7sc_list": [
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "13610"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "31610"
+                },
+                {
+                    "boro": "1",
+                    "lgc": "01",
+                    "sc5": "45340"
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                }
+            ],
+            "out_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "out_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "out_boro_name1": "MANHATTAN",
+            "out_error_message": "                                                                                ",
+            "out_error_message2": "                                                                                ",
+            "out_filler02": " ",
+            "out_filler03": "                 ",
+            "out_grc": "00",
+            "out_grc2": "  ",
+            "out_hnd": "                ",
+            "out_hns": "           ",
+            "out_low_hnd": "                ",
+            "out_low_hns": "           ",
+            "out_node": "       ",
+            "out_number_of_stcodes": "03",
+            "out_reason_code": " ",
+            "out_reason_code2": " ",
+            "out_reason_code_qualifier": " ",
+            "out_reason_code_qualifier2": " ",
+            "out_st_attr": " ",
+            "out_stname1": "BROADWAY                        ",
+            "out_stname2": "STONE STREET                    ",
+            "out_stname3": "                                ",
+            "out_stname_list": [
+                "BROADWAY                        ",
+                "STONE STREET                    ",
+                "WHITEHALL STREET                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                "
+            ],
+            "out_unit": "              ",
+            "out_units": {
+                "unit_identifier": "          ",
+                "unit_type": "    "
+            },
+            "out_warning_code": "  ",
+            "out_warning_code2": "  "
+        },
+        "wa2f2w": {
+            "cdta_2020": "MN01",
+            "census_2020_block": "1023",
+            "filler_01": "                                                                                                                                                                                                                                                                                                                                                                 ",
+            "filler_for_grid_gen": "                      ",
+            "grc": "00",
+            "latitude": "40.704042",
+            "longitude": "-74.013186 ",
+            "node_b7scs": [
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                }
+            ],
+            "node_list": [
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       "
+            ],
+            "nta_2020": "MN0101",
+            "preferred_lgcs": [
+                "  ",
+                "  ",
+                "  ",
+                "  ",
+                "  "
+            ],
+            "reason_code": " ",
+            "reason_code_qualifier": " ",
+            "true_replication_counter": "01",
+            "turn_restrictions": [
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " "
+            ],
+            "valid_lgcs_st1": [
+                "01",
+                "07",
+                "  ",
+                "  "
+            ],
+            "valid_lgcs_st2": [
+                "01",
+                "  ",
+                "  ",
+                "  "
+            ],
+            "wa2f2": {
+                "ad": "65",
+                "atomic_polygon": "212",
+                "cd": "10",
+                "cd_eligible": "I",
+                "census_tract_1990": "   9  ",
+                "census_tract_2000": "   9  ",
+                "census_tract_2010": "   9  ",
+                "census_tract_2020": "   9  ",
+                "co": "01",
+                "com_dist": {
+                    "boro": "1",
+                    "district_number": "01"
+                },
+                "compass": " ",
+                "dcp_pref_lgc1": "01",
+                "dcp_pref_lgc2": "01",
+                "dot_st_light_contract_area": "1",
+                "dup_intersect_cnt": " ",
+                "duplicate_intersection_distance": "     ",
+                "filler01": "  ",
+                "filler02": "  ",
+                "filler_level_codes": "M M M     ",
+                "fire_bat": "01",
+                "fire_co_num": "015",
+                "fire_co_type": "L",
+                "fire_div": "01",
+                "gridkey2": "02113610131610       ",
+                "health_area": "7700",
+                "health_center_dist": "15",
+                "lion_node_num": "0015138",
+                "mc": "01",
+                "mh_ri_flag": " ",
+                "police_boro_com": "1",
+                "police_patrol_boro": "MS",
+                "police_pct": "001",
+                "police_sector": "  1B",
+                "san_dist": "101",
+                "san_sub_section": "1B",
+                "sanborn1": {
+                    "boro": "1",
+                    "page": "001",
+                    "page_suffix": " ",
+                    "volume": "01",
+                    "volume_suffix": "S"
+                },
+                "sanborn2": {
+                    "boro": " ",
+                    "page": "   ",
+                    "page_suffix": " ",
+                    "volume": "  ",
+                    "volume_suffix": " "
+                },
+                "school_dist": "02",
+                "sd": "26",
+                "x_coord": "0980594",
+                "x_sts": [
+                    {
+                        "boro": "1",
+                        "sc5": "13610"
+                    },
+                    {
+                        "boro": "1",
+                        "sc5": "31610"
+                    },
+                    {
+                        "boro": "1",
+                        "sc5": "45340"
+                    },
+                    {
+                        "boro": " ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "sc5": "     "
+                    }
+                ],
+                "x_sts_cnt": "3",
+                "y_coord": "0195778",
+                "z_coord": "       ",
+                "zip_code": "10004"
+            },
+            "warning_code": "  "
+        }
+    }
+}

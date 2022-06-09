@@ -1,0 +1,16 @@
+FBL
+SelectedInputs
+SheetIndex,1
+RejectWarnings,True
+RejectThreshold,0.75
+UsingTpad,True
+CompleteBinIdx,0
+BoroIdx,-1
+BlockIdx,-1
+LotIdx,-1
+SelectedOutputs
+full bbl,User Inputs
+BIN,Complete BIN List
+High Address Number,Address Range
+stroll_key,WA2F1AX Fields
+out_b10sc1,WA1 Fields

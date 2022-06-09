@@ -1,0 +1,16 @@
+FBN
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.7
+UsingTpad,True
+BinIdx,0
+SelectedOutputs
+bins,User Inputs
+out_grc,WA1 Fields
+out_bbl,WA1 Fields
+out_bin,WA1 Fields
+condo_base_bbl,WA2F1AX Fields
+condo_bill_bbl,WA2F1AX Fields
+condo_bill_scc,WA2F1AX Fields
+BIN,Address Range

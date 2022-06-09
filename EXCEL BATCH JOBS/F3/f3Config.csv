@@ -1,0 +1,82 @@
+F3
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.85
+StNameNormalization,DcpPreferredStreetName
+Boro1Idx,0
+StName1Idx,1
+Boro2Idx,2
+StName2Idx,3
+Boro3Idx,4
+StName3Idx,5
+SideOfStIdx,-1
+SelectedOutputs
+in_auxseg_switch,WA1 Fields
+in_b10sc1,WA1 Fields
+in_b10sc2,WA1 Fields
+in_b10sc3,WA1 Fields
+in_bbl,WA1 Fields
+in_bin,WA1 Fields
+in_bin_string,WA1 Fields
+in_boro1,WA1 Fields
+in_boro2,WA1 Fields
+in_boro3,WA1 Fields
+in_browse_flag,WA1 Fields
+in_compass_dir,WA1 Fields
+in_compass_dir2,WA1 Fields
+in_filler01,WA1 Fields
+in_filler03,WA1 Fields
+in_func_code,WA1 Fields
+in_hn_justification,WA1 Fields
+in_hn_norm_override,WA1 Fields
+in_hnd,WA1 Fields
+in_hnl,WA1 Fields
+in_hns,WA1 Fields
+in_legacy_grc_flag,WA1 Fields
+in_long_wa2_flag,WA1 Fields
+in_low_hnd,WA1 Fields
+in_low_hns,WA1 Fields
+in_mode_switch,WA1 Fields
+in_node,WA1 Fields
+in_platform_ind,WA1 Fields
+in_real_street_only,WA1 Fields
+in_roadbed_request_switch,WA1 Fields
+in_snl,WA1 Fields
+in_stname1,WA1 Fields
+in_stname2,WA1 Fields
+in_stname3,WA1 Fields
+in_stname_normalization,WA1 Fields
+in_tpad_switch,WA1 Fields
+in_unit,WA1 Fields
+in_xstreet_names_flag,WA1 Fields
+in_zip_code,WA1 Fields
+out_b10sc1,WA1 Fields
+out_b10sc2,WA1 Fields
+out_b10sc3,WA1 Fields
+out_bbl,WA1 Fields
+out_bin,WA1 Fields
+out_boro_name1,WA1 Fields
+out_error_message,WA1 Fields
+out_error_message2,WA1 Fields
+out_filler02,WA1 Fields
+out_filler03,WA1 Fields
+out_grc,WA1 Fields
+out_grc2,WA1 Fields
+out_hnd,WA1 Fields
+out_hns,WA1 Fields
+out_low_hnd,WA1 Fields
+out_low_hns,WA1 Fields
+out_node,WA1 Fields
+out_number_of_stcodes,WA1 Fields
+out_reason_code,WA1 Fields
+out_reason_code2,WA1 Fields
+out_reason_code_qualifier,WA1 Fields
+out_reason_code_qualifier2,WA1 Fields
+out_st_attr,WA1 Fields
+out_stname1,WA1 Fields
+out_stname2,WA1 Fields
+out_stname3,WA1 Fields
+out_unit,WA1 Fields
+out_warning_code,WA1 Fields
+out_warning_code2,WA1 Fields

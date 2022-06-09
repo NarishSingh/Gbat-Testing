@@ -1,0 +1,14 @@
+FBF
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.75
+StNameNormalization,PrincipalStreetName
+BoroIdx,0
+StNameIdx,1
+SelectedOutputs
+boro,User Inputs
+stName,User Inputs
+out_grc,WA1 Fields
+out_stname1,WA1 Fields
+B7SC,SND Fields

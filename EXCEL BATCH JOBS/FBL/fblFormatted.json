@@ -1,0 +1,119 @@
+{
+    "display": {
+        "AddressRangeKeys": [
+            {
+                "Key": "",
+                "Value": "Ordinary Address Range"
+            },
+            {
+                "Key": "N",
+                "Value": "Non-Addressable Place Name"
+            }
+        ],
+        "AddressRangeList": [
+            {
+                "b7sc": "10110901",
+                "bin": "1001026",
+                "high_address_number": "                ",
+                "low_address_number": "                ",
+                "street_name": "EQUITABLE BUILDING              ",
+                "tpad_bin_status": "N\/A",
+                "type": "N",
+                "type_meaning": "Non-Addressable Place Name"
+            },
+            {
+                "b7sc": "11361001",
+                "bin": "1001026",
+                "high_address_number": "             124",
+                "low_address_number": "             104",
+                "street_name": "BROADWAY                        ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            },
+            {
+                "b7sc": "11441001",
+                "bin": "1001026",
+                "high_address_number": "              84",
+                "low_address_number": "              70",
+                "street_name": "CEDAR STREET                    ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            },
+            {
+                "b7sc": "12710001",
+                "bin": "1001026",
+                "high_address_number": "              25",
+                "low_address_number": "              15",
+                "street_name": "NASSAU STREET                   ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            },
+            {
+                "b7sc": "12887001",
+                "bin": "1001026",
+                "high_address_number": "              16",
+                "low_address_number": "               2",
+                "street_name": "PINE STREET                     ",
+                "tpad_bin_status": "N\/A",
+                "type": " ",
+                "type_meaning": "Ordinary Address Range"
+            }
+        ],
+        "CompleteBINList": [
+            {
+                "bin": "1001026",
+                "tpad": null
+            }
+        ],
+        "SimilarNamesList": [],
+        "in_bbl_block": "00047",
+        "in_bbl_lot": "7501",
+        "in_boro": "1",
+        "in_func_code": "BL",
+        "out_TPAD_bin": "       ",
+        "out_TPAD_bin_status": "No Activity",
+        "out_TPAD_conflict_flag": " ",
+        "out_bbl": "1000477501",
+        "out_bbl_block": "47",
+        "out_bbl_lot": "7501",
+        "out_bid": "DOWNTOWN ALLIANCE               ",
+        "out_bin": "1001026",
+        "out_bin_status": "No Activity",
+        "out_boro_name1": "MANHATTAN",
+        "out_condo_base_bbl": "N\/A",
+        "out_condo_billing_bbl": "1 - 00047 - 7501",
+        "out_condo_flag": "Condominium",
+        "out_condo_num": "0871",
+        "out_coop_num": "N\/A",
+        "out_corner_code": "  ",
+        "out_dcp_zoning_map": "12B",
+        "out_error_message": "                                                                                ",
+        "out_grc": "00",
+        "out_high_bbl_condo": "1 - 00047 - 7501",
+        "out_interior_flag": "Not Interior Lot",
+        "out_irreg_flag": "Not Irregular Lot",
+        "out_lat_property": "40.708219",
+        "out_lon_property": "-74.010521 ",
+        "out_low_bbl_condo": "1 - 00047 - 7501",
+        "out_num_of_bldgs": "1",
+        "out_num_of_blockfaces": "4",
+        "out_reason_code": " ",
+        "out_rpad_bldg_class": "RB",
+        "out_rpad_scc": "1",
+        "out_sanborn_boro": "1",
+        "out_sanborn_page": "005 ",
+        "out_sanborn_volume": "01S",
+        "out_stname1": "                                ",
+        "out_tax_map": "1",
+        "out_tax_section": "01",
+        "out_tax_volume": "01",
+        "out_vacant_flag": "Not Vacant",
+        "out_wa1_message": "                                                                                ",
+        "out_x_coord_property": "981333",
+        "out_y_coord_property": "197300"
+    },
+    "root": null
+}

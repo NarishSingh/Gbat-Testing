@@ -1,0 +1,500 @@
+{
+    "display": null,
+    "root": {
+        "wa1": {
+            "in_auxseg_switch": "Y",
+            "in_b10sc1": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc2": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_b10sc3": {
+                "boro": "1",
+                "lgc": "  ",
+                "sc5": "     ",
+                "spv": "   "
+            },
+            "in_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "in_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "in_bin_string": "       ",
+            "in_boro1": "1",
+            "in_boro2": "1",
+            "in_boro3": "1",
+            "in_browse_flag": " ",
+            "in_compass_dir": " ",
+            "in_compass_dir2": " ",
+            "in_filler01": " ",
+            "in_filler03": "                                                                                  ",
+            "in_filler4": "                              ",
+            "in_func_code": "3 ",
+            "in_hn_justification": " ",
+            "in_hn_norm_override": " ",
+            "in_hnd": "                ",
+            "in_hnl": "  ",
+            "in_hns": "           ",
+            "in_legacy_grc_flag": " ",
+            "in_long_wa2_flag": " ",
+            "in_low_hnd": "                ",
+            "in_low_hns": "           ",
+            "in_mode_switch": "E",
+            "in_node": "       ",
+            "in_platform_ind": "C",
+            "in_real_street_only": " ",
+            "in_roadbed_request_switch": " ",
+            "in_snl": "  ",
+            "in_stname1": "BROADWAY                        ",
+            "in_stname2": "STONE STREET                    ",
+            "in_stname3": "BEAVER STREET                   ",
+            "in_stname_normalization": " ",
+            "in_tpad_switch": " ",
+            "in_unit": "              ",
+            "in_xstreet_names_flag": " ",
+            "in_zip_code": "     ",
+            "out_attr_bytes": [
+                " ",
+                " ",
+                " "
+            ],
+            "out_b10sc1": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "13610",
+                "spv": "010"
+            },
+            "out_b10sc2": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "31610",
+                "spv": "010"
+            },
+            "out_b10sc3": {
+                "boro": "1",
+                "lgc": "01",
+                "sc5": "12950",
+                "spv": "010"
+            },
+            "out_b7sc_list": [
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                },
+                {
+                    "boro": " ",
+                    "lgc": "  ",
+                    "sc5": "     "
+                }
+            ],
+            "out_bbl": {
+                "block": "     ",
+                "boro": " ",
+                "lot": "    "
+            },
+            "out_bin": {
+                "binnum": "      ",
+                "boro": " "
+            },
+            "out_boro_name1": "MANHATTAN",
+            "out_error_message": "                                                                                ",
+            "out_error_message2": "                                                                                ",
+            "out_filler02": " ",
+            "out_filler03": "                 ",
+            "out_grc": "00",
+            "out_grc2": "  ",
+            "out_hnd": "                ",
+            "out_hns": "           ",
+            "out_low_hnd": "                ",
+            "out_low_hns": "           ",
+            "out_node": "       ",
+            "out_number_of_stcodes": "  ",
+            "out_reason_code": " ",
+            "out_reason_code2": " ",
+            "out_reason_code_qualifier": " ",
+            "out_reason_code_qualifier2": " ",
+            "out_st_attr": " ",
+            "out_stname1": "BROADWAY                        ",
+            "out_stname2": "STONE STREET                    ",
+            "out_stname3": "BEAVER STREET                   ",
+            "out_stname_list": [
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                ",
+                "                                "
+            ],
+            "out_unit": "              ",
+            "out_units": {
+                "unit_identifier": "          ",
+                "unit_type": "    "
+            },
+            "out_warning_code": "  ",
+            "out_warning_code2": "  "
+        },
+        "wa2F3eas": {
+            "auxseg_count": "0002",
+            "auxseg_filler": "      ",
+            "auxseg_id_list": [
+                "0023004",
+                "0023056",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                ""
+            ],
+            "wa2f3e": {
+                "No_Parking_lanes": " 1",
+                "No_Traveling_lanes": " 1",
+                "Total_Lanes": " 2",
+                "b5sc_dup_flag": " ",
+                "bike_lane": " ",
+                "bike_lane2": "  ",
+                "bike_traffic_direction": "  ",
+                "coincident_seg_cnt": "2",
+                "cont_parity_ind": " ",
+                "county_boundary": " ",
+                "curve_flag": " ",
+                "dcp_pref_lgc1": "01",
+                "dcp_pref_lgc2": "01",
+                "dcp_pref_lgc3": "01",
+                "dog_leg": " ",
+                "dot_street_light_contract_area": "1",
+                "dsny_snow_priority": "C",
+                "fdny_id": "       ",
+                "feature_type": " ",
+                "federal_classification_code": "  ",
+                "filler05": "                                                                                                                                         ",
+                "filler_reserved_for_3ce_sos": " ",
+                "from_latitude": "40.704042",
+                "from_longitude": "-74.013186 ",
+                "from_node": "0015138",
+                "from_street_valid_lgcs": [
+                    "01",
+                    "  ",
+                    "  ",
+                    "  "
+                ],
+                "from_x_coord": "0980594",
+                "from_y_coord": "0195778",
+                "generated_record_flag": "R",
+                "generic_id": "0000428",
+                "gridkey3e": "03113610011129500113161001                     ",
+                "hi_x_sts": [
+                    {
+                        "boro": "1",
+                        "lgc": "01",
+                        "sc5": "12950"
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    }
+                ],
+                "hi_x_sts_cnt": "1",
+                "left_side": {
+                    "ad": "65",
+                    "alternate_hhnd": "                ",
+                    "alternate_lhnd": "                ",
+                    "blockface_id": "02122",
+                    "boro": "1",
+                    "cdta_2020": "MN01",
+                    "census_block_2000": "2005",
+                    "census_block_2010": "1007",
+                    "census_block_2020": "1008",
+                    "census_block_suffix_2000": " ",
+                    "census_block_suffix_2010": " ",
+                    "census_block_suffix_2020": " ",
+                    "census_tract_1990": "   9  ",
+                    "census_tract_2000": "   9  ",
+                    "census_tract_2010": "   9  ",
+                    "census_tract_2020": "   9  ",
+                    "comdist": {
+                        "boro": "1",
+                        "district_number": "01"
+                    },
+                    "dynamic_block": "919",
+                    "ed": "088",
+                    "filler04": "   ",
+                    "fire_bat": "01",
+                    "fire_co_num": "015",
+                    "fire_co_type": "L",
+                    "fire_div": "01",
+                    "hcd": "15   ",
+                    "health_area": "7700",
+                    "hhnd": "0000000         ",
+                    "iaei": "I",
+                    "lhnd": "0000000         ",
+                    "nta": "MN25",
+                    "nta_2020": "MN0101",
+                    "nta_name": "                                                                           ",
+                    "police_boro_com": "1",
+                    "police_patrol_boro": "MS",
+                    "police_pct": "001",
+                    "police_sector": "  1B ",
+                    "puma_code": "03810",
+                    "school_dist": "02",
+                    "zip_code": "10004"
+                },
+                "legacy_segment_id": "0023004",
+                "lionkey": {
+                    "boro": "1",
+                    "face_code": "0755",
+                    "sequence_number": "00010"
+                },
+                "lo_x_sts": [
+                    {
+                        "boro": "1",
+                        "lgc": "01",
+                        "sc5": "31610"
+                    },
+                    {
+                        "boro": "1",
+                        "lgc": "01",
+                        "sc5": "45340"
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    },
+                    {
+                        "boro": " ",
+                        "lgc": "  ",
+                        "sc5": "     "
+                    }
+                ],
+                "lo_x_sts_cnt": "2",
+                "loc_status": " ",
+                "mh_ri_flag": " ",
+                "nypd_id": "       ",
+                "on_street_additional_valid_lgcs": [
+                    "  ",
+                    "  ",
+                    "  ",
+                    "  ",
+                    "  "
+                ],
+                "on_street_valid_lgcs": [
+                    "01",
+                    "07",
+                    "  ",
+                    "  "
+                ],
+                "physical_id": "0000542",
+                "right_of_way_type": " ",
+                "right_side": {
+                    "ad": "65",
+                    "alternate_hhnd": "                ",
+                    "alternate_lhnd": "                ",
+                    "blockface_id": "02122",
+                    "boro": "1",
+                    "cdta_2020": "MN01",
+                    "census_block_2000": "2002",
+                    "census_block_2010": "1003",
+                    "census_block_2020": "1004",
+                    "census_block_suffix_2000": " ",
+                    "census_block_suffix_2010": " ",
+                    "census_block_suffix_2020": " ",
+                    "census_tract_1990": "   9  ",
+                    "census_tract_2000": "   9  ",
+                    "census_tract_2010": "   9  ",
+                    "census_tract_2020": "   9  ",
+                    "comdist": {
+                        "boro": "1",
+                        "district_number": "01"
+                    },
+                    "dynamic_block": "213",
+                    "ed": "088",
+                    "filler04": "   ",
+                    "fire_bat": "01",
+                    "fire_co_num": "015",
+                    "fire_co_type": "L",
+                    "fire_div": "01",
+                    "hcd": "15   ",
+                    "health_area": "7700",
+                    "hhnd": "0000008         ",
+                    "iaei": "I",
+                    "lhnd": "0000002         ",
+                    "nta": "MN25",
+                    "nta_2020": "MN0101",
+                    "nta_name": "                                                                           ",
+                    "police_boro_com": "1",
+                    "police_patrol_boro": "MS",
+                    "police_pct": "001",
+                    "police_sector": "  1B ",
+                    "puma_code": "03810",
+                    "school_dist": "02",
+                    "zip_code": "10004"
+                },
+                "roadway_type": " 1",
+                "segment_azm": "097",
+                "segment_id": "0023004",
+                "segment_len": "00362",
+                "segment_orient": "2",
+                "segment_type": "U",
+                "speed_limit": "25",
+                "st_width_max": " 38",
+                "street_status": "2",
+                "street_width": " 25",
+                "street_width_irregular": " ",
+                "to_latitude": "40.705030",
+                "to_longitude": "-74.013327 ",
+                "to_node": "0015170",
+                "to_street_valid_lgcs": [
+                    "01",
+                    "  ",
+                    "  ",
+                    "  "
+                ],
+                "to_x_coord": "0980555",
+                "to_y_coord": "0196138",
+                "traffic_direction": "A",
+                "truck_route_type": " ",
+                "x_street_reversal_flag": " "
+            }
+        }
+    }
+}

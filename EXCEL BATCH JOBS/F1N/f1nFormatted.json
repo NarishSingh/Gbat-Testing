@@ -1,0 +1,16 @@
+{
+    "display": {
+        "SimilarNamesList": [],
+        "in_boro": "1",
+        "in_func_code": "1N",
+        "in_stname1": "BROADWAY                        ",
+        "out_b10sc1": "11361001010",
+        "out_boro_name1": "MANHATTAN",
+        "out_error_message": "                                                                                ",
+        "out_gft": "Unhyphenated",
+        "out_grc": "00",
+        "out_reason_code": " ",
+        "out_stname1": "BDWY                            "
+    },
+    "root": null
+}

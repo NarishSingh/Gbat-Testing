@@ -1,0 +1,25 @@
+F1B
+SelectedInputs
+UsingTpad,True
+UsingRoadbed,False
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.9
+UsingFreeform,True
+UsingHns,False
+StNameNormalization,PrincipalStreetName
+BoroZipIdx,0
+AddrNoIdx,-1
+StNameIdx,1
+UnitIdx,-1
+SelectedOutputs
+bbl_toString,Non-Work Area Fields (root)
+bin_toString,Non-Work Area Fields (root)
+boe_preferred_b7sc_toString,Non-Work Area Fields (root)
+nta_toString,Non-Work Area Fields (root)
+out_TPAD_bin_toString,Non-Work Area Fields (root)
+out_b10sc1_boro_toString,Non-Work Area Fields (root)
+out_b10sc1_sc5_toString,Non-Work Area Fields (root)
+out_b10sc1_toString,Non-Work Area Fields (root)
+out_bid_toString,Non-Work Area Fields (root)
+san_sched_toString,Non-Work Area Fields (root)

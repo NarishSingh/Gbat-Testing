@@ -1,0 +1,21 @@
+FD
+SelectedInputs
+SheetIndex,0
+RejectWarnings,True
+RejectThreshold,0.8
+StNameLen,25
+UsingSortFormat,False
+UsingCompactFormat,True
+Boro1Idx,-1
+B10Sc1Idx,0
+Boro2Idx,-1
+B10Sc2Idx,1
+Boro3Idx,-1
+B10Sc3Idx,2
+SelectedOutputs
+b10sc3,User Inputs
+in_b10sc3,Normalized Inputs
+out_grc,FD Outputs
+b10sc_toString 1,Street Code List
+b10sc_toString 2,Street Code List
+b10sc_toString 3,Street Code List
