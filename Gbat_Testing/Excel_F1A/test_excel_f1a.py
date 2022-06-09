@@ -103,6 +103,22 @@ def get_expected_output_tbl() -> list[F1A]:
     return response_list
 
 
+def get_boro_name(boro: str) -> str:
+    match boro:
+        case "1":
+            return "Manhattan"
+        case "2":
+            return "Bronx"
+        case "3":
+            return "Brooklyn"
+        case "4":
+            return "Queens"
+        case "5":
+            return "Staten Island"
+        case _:
+            return ""
+
+
 @pytest.fixture
 def get_expected_error_tbl(get_expected_output_tbl) -> list[list[str]]:
     """
@@ -123,39 +139,13 @@ def get_expected_error_tbl(get_expected_output_tbl) -> list[list[str]]:
 
     # error data
     for err in error_responses:
-        row: list[str] = [err.ID, err.in_func_code, err.boro, "", err.in_zip_code, err.addrNo,
+        row: list[str] = [err.ID, err.in_func_code, err.boro, get_boro_name(err.boro), err.in_zip_code, err.addrNo,
                           err.stName, err.unit, err.out_grc, err.out_error_message]
         row.extend(err.similar_names_list)
 
         error_list.append(row)
 
     return error_list
-    """
-    return [
-        # tbl head
-        ["ID", "Function Code", "Borough Code", "Borough Name", "In ZIP Code", "Address Number",
-         "Street or Place Name",
-         "Unit Input", "GRC", "Error Message", "Similar Name 1", "b7sc 1", "Similar Name 2", "b7sc 2",
-         "Similar Name 3",
-         "b7sc 3", "Similar Name 4", "b7sc 4", "Similar Name 5", "b7sc 5", "Similar Name 6", "b7sc 6",
-         "Similar Name 7",
-         "b7sc 7", "Similar Name 8", "b7sc 8", "Similar Name 9", "b7sc 9", "Similar Name 10", "b7sc 10"],
-        # errata
-        ["8", "1A", "er", "er", "", "err", "err", "", "99",
-         "INVALID BOROUGH CODE. MUST BE 1, 2, 3, 4 OR 5.", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-         "",
-         "", "", "", "", ""],
-        ["9", "1A", "3", "Brooklyn", "", "951", "err3", "", "EE",
-         "'ERR3' NOT RECOGNIZED. IS IT 'ERROL MILLIARD WAY'?", "ERROL MILLIARD WAY", "33703002", "", "", "", "", "",
-         "",
-         "", "", "", "", "", "", "", "", "", "", "", ""],
-        ["10", "1A", "1", "Manhattan", "", "120", "bwa", "", "EE",
-         "'BWA' NOT RECOGNIZED. THERE ARE 003 SIMILAR NAMES.", "BWAY BR OVR HARLEM RIV VEHICULAR", "11361011",
-         "BWAY BR OVR HARLEM RIVER IRT", "11361012", "BWAY BRIDGE", "11361006", "", "", "", "", "", "", "", "", "",
-         "",
-         "", "", "", ""]
-    ]
-    """
 
 
 # endregion
@@ -179,7 +169,7 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
             expected_row: F1A = expected[r]
             expected_col_head: Cell = col_heads[c]
             # print(f"{cell.value} | [{r + 2},{c + 1}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
-            assert cell.value or "" == getattr(expected_row, expected_col_head.value)  # null/None -> empty string
+            assert cell.value == getattr(expected_row, expected_col_head.value)
             c += 1
 
         r += 1
@@ -194,8 +184,13 @@ def test_error_f1a(get_expected_error_tbl, setup_f1a_error_tbl):
         c: int = 0  # col tracker
 
         for cell in row:
-            print(f"{cell.value} | [{r + 2},{c + 1}] {expected[r][c]}")  # debug quick print
-            assert cell.value or "" == expected[r][c]  # null/None -> empty string
+            # print(f"{cell.value} | [{r + 2},{c + 1}] {expected[r][c]}")  # debug quick print
+
+            # If both are empty and/or all whitespace, test should pass
+            test_cell: str = (cell.value or "").strip()
+            ideal_cell: str = (expected[r][c] or "").strip()
+
+            assert test_cell == ideal_cell
             c += 1
 
         r += 1

@@ -131,7 +131,7 @@ def get_similar_names_list(response: dict) -> list[str]:
     b7scs: list[str] = []
 
     for b7 in response["root"]["wa1"]["out_b7sc_list"]:
-        b7scs.append(f"{b7['boro']}{b7['lgc']}{b7['sc5']}")
+        b7scs.append(f"{b7['boro']}{b7['sc5']}{b7['lgc']}")
 
     sim_names: list[str] = []
 
