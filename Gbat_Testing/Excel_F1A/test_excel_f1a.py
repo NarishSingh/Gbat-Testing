@@ -105,24 +105,24 @@ def get_expected_output_tbl() -> list[F1A]:
     url: str = f"https://geoservice.planning.nyc.gov/geoservice/geoservice.svc/"
     key: str = "qQBPqfVDqJ3ZFJrS"
 
+    # k: id as int, v: input struct with expected input data (will be copied to front of output tbl if user chooses)
     input_tbl: dict = {
         1: f1a_input("1", "120", "Broadway"),
         2: f1a_input("1", "140", "Broadway"),
         3: f1a_input("1", "695", "Park Ave"),
-        4: f1a_input("4", "90-15", "queens blv"),
+        4: f1a_input("4", "90-15", "queens blvd"),
         5: f1a_input("4", "13118", "liberty ave"),
-        6: f1a_input("3", "20", "Fort Greene Place"),
+        6: f1a_input("3", "20", "Fort Greene Pl"),
         7: f1a_input("3", "620", "Atlantic Ave"),
         8: f1a_input("er", "err", "err"),
         9: f1a_input("3", "951", "err3"),
         10: f1a_input("1", "120", "bwa"),
     }
 
-    k: int
-    v: f1a_input
     for k, v in input_tbl.items():
         uri = f"Function_1A?Borough={v.boro}&AddressNo={v.addrNo}&StreetName={v.stName}&DisplayFormat={False}&Key={key}"
         response: Response = rq.get(url + uri)
+
         if response.status_code == 200:
             f1a_json = json.loads(response.content)
             f1a: F1A = F1A(str(k), v, f1a_json)
