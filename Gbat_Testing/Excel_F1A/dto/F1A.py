@@ -23,7 +23,7 @@ def get_bbl(response) -> str:
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_TPAD_new_bin(response) -> str:
+def get_tpad_new_bin(response) -> str:
     new_bin: dict = response["root"]["wa2f1ax"]["TPAD_new_bin"]
     return f"{new_bin['boro']}{new_bin['binnum']}"
 
@@ -34,18 +34,18 @@ def get_bid_id(response) -> str:
 
 
 def get_in_bin(response) -> str:
-    bin: dict = response["root"]["wa1"]["in_bin"]
-    return f"{bin['boro']}{bin['binnum']}"
+    bin_dict: dict = response["root"]["wa1"]["in_bin"]
+    return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
 def get_out_bin(response) -> str:
-    bin: dict = response["root"]["wa1"]["out_bin"]
-    return f"{bin['boro']}{bin['binnum']}"
+    bin_dict: dict = response["root"]["wa1"]["out_bin"]
+    return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
 def get_bin(response) -> str:
-    bin: dict = response["root"]["wa2f1ax"]["bin"]
-    return f"{bin['boro']}{bin['binnum']}"
+    bin_dict: dict = response["root"]["wa2f1ax"]["bin"]
+    return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
 def get_business_area(response) -> str:
@@ -79,8 +79,39 @@ def get_dof_map(response) -> str:
 
 
 def get_gridkey1(response) -> str:
-    gk1: dict = response["root"]["wa2f1ax"]["gridkey1"]
-    return f"{}"
+    gk: dict = response["root"]["wa2f1ax"]["gridkey1"]
+    gk_b5sc: str = f"{gk['b5sc']['boro']}{gk['b5sc']['sc5']}"
+    return f"{gk['record_type']}{gk_b5sc}{gk['parity']}{gk['hi_hns']}"
+
+
+def get_in_b10sc1(response):
+    b10: dict = response["root"]["wa1"]["in_b10sc1"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_in_b10sc2(response):
+    b10: dict = response["root"]["wa1"]["in_b10sc2"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_in_b10sc3(response):
+    b10: dict = response["root"]["wa1"]["in_b10sc3"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_out_b10sc1(response):
+    b10: dict = response["root"]["wa1"]["out_b10sc1"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_out_b10sc2(response):
+    b10: dict = response["root"]["wa1"]["out_b10sc2"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_out_b10sc3(response):
+    b10: dict = response["root"]["wa1"]["out_b10sc3"]
+    return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
 class F1A:
@@ -91,6 +122,7 @@ class F1A:
         self.boro: str = input.boro
         self.addrNo: str = input.addrNo
         self.stName: str = input.stName
+        # todo add the optional params here
 
         # region Non-Work Area Fields (root)
         self.out_b10sc_toString: str = response["root"]["out_b10sc_toString"]
@@ -104,9 +136,9 @@ class F1A:
 
         # region WA1
         self.in_auxseg_switch: str = response["root"]["wa1"]["in_auxseg_switch"]
-        self.in_b10sc1: str = response["root"]["wa1"]["in_b10sc1"]
-        self.in_b10sc2: str = response["root"]["wa1"]["in_b10sc2"]
-        self.in_b10sc3: str = response["root"]["wa1"]["in_b10sc3"]
+        self.in_b10sc1: str = get_in_b10sc1(response)
+        self.in_b10sc2: str = get_in_b10sc2(response)
+        self.in_b10sc3: str = get_in_b10sc3(response)
         self.in_bbl: str = get_in_bbl(response)
         self.in_bin: str = get_in_bin(response)
         self.in_bin_string: str = response["root"]["wa1"]["in_bin_string"]
@@ -142,9 +174,9 @@ class F1A:
         self.in_unit: str = response["root"]["wa1"]["in_unit"]
         self.in_xstreet_names_flag: str = response["root"]["wa1"]["in_xstreet_names_flag"]
         self.in_zip_code: str = response["root"]["wa1"]["in_zip_code"]
-        self.out_b10sc1: str = response["root"]["wa1"]["out_b10sc1"]
-        self.out_b10sc2: str = response["root"]["wa1"]["out_b10sc2"]
-        self.out_b10sc3: str = response["root"]["wa1"]["out_b10sc3"]
+        self.out_b10sc1: str = get_out_b10sc1(response)
+        self.out_b10sc2: str = get_out_b10sc2(response)
+        self.out_b10sc3: str = get_out_b10sc3(response)
         self.out_bbl: str = get_out_bbl(response)
         self.out_bin: str = get_out_bin(response)
         self.out_boro_name1: str = response["root"]["wa1"]["out_boro_name1"]
@@ -178,7 +210,7 @@ class F1A:
         self.DCP_Zoning_Map: str = response["root"]["wa2f1ax"]["DCP_Zoning_Map"]
         self.TPAD_bin_status: str = response["root"]["wa2f1ax"]["TPAD_bin_status"]
         self.TPAD_conflict_flag: str = response["root"]["wa2f1ax"]["TPAD_conflict_flag"]
-        self.TPAD_new_bin: str = get_TPAD_new_bin(response)
+        self.TPAD_new_bin: str = get_tpad_new_bin(response)
         self.TPAD_new_bin_status: str = response["root"]["wa2f1ax"]["TPAD_new_bin_status"]
         self.addr_overflow_flag: str = response["root"]["wa2f1ax"]["addr_overflow_flag"]
         self.bbl: str = get_bbl(response)

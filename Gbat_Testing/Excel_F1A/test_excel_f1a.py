@@ -1,7 +1,5 @@
 import json
 from dataclasses import dataclass
-from typing import List, Any
-
 import openpyxl as xl
 import pytest
 import requests as rq
@@ -175,7 +173,7 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
     # setting up the expected and ideal/actual values
     expected: list[F1A] = get_expected_output_tbl
     actual: worksheet = setup_f1a_output_tbl
-    col_heads: list[Any] = list(list(actual.rows)[0])
+    col_heads: list = list(list(actual.rows)[0])
 
     # check all cells
     r: int = 0  # row tracker
