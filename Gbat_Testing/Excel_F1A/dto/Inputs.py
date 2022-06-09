@@ -14,7 +14,7 @@ class f1a_input:
     # optionals
     zip: str = ""
     using_tpad: str = "y"
-    browse_flag: str = "p"  # p, f, r, black
+    browse_flag: str = "p"  # p, f, r, blank
     unit: str = ""
 
 
@@ -31,5 +31,6 @@ class f1e_input:
 @dataclass
 class fap_input:
     pass
+
 
 # todo add more

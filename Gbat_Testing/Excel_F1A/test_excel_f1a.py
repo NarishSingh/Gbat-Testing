@@ -28,8 +28,8 @@ def setup_f1a_output_tbl(get_workbook) -> worksheet:
     :return: worksheet object for the latest output table
     """
     f1a: Workbook = get_workbook
-    output_sheets: list[str] = [name for name in f1a.sheetnames if "Output" in name]
-    return f1a[output_sheets[-1]]
+    outputs: list[str] = [name for name in f1a.sheetnames if "Output" in name]
+    return f1a[outputs[-1]]
 
 
 @pytest.fixture
@@ -40,8 +40,8 @@ def setup_f1a_error_tbl(get_workbook) -> worksheet:
     :return: worksheet object for the latest error table/sheet
     """
     f1a: Workbook = get_workbook
-    error_sheets: list[str] = [name for name in f1a.sheetnames if "Error" in name]
-    return f1a[error_sheets[-1]]
+    err_sheets: list[str] = [name for name in f1a.sheetnames if "Error" in name]
+    return f1a[err_sheets[-1]]
 
 
 @pytest.fixture
@@ -64,14 +64,14 @@ def setup_f1a_complete_bins_tbl(get_workbook) -> worksheet:
     :return: worksheet object for the latest bins table/sheet
     """
     f1a: Workbook = get_workbook
-    bins_sheets: list[str] = [name for name in f1a.sheetnames if "Complete_BIN" in name]
-    return f1a[bins_sheets[-1]]
+    bin_sheets: list[str] = [name for name in f1a.sheetnames if "Complete_BIN" in name]
+    return f1a[bin_sheets[-1]]
 
 
 @pytest.fixture
 def get_expected_output_tbl() -> list[F1A]:
     response_list: list[F1A] = []
-    url: str = f"https://geoservice.planning.nyc.gov/geoservice/geoservice.svc/"
+    url: str = r"https://geoservice.planning.nyc.gov/geoservice/geoservice.svc/"
     key: str = "qQBPqfVDqJ3ZFJrS"
 
     # k: id as int, v: input struct with expected input data (will be copied to front of output tbl if user chooses)
@@ -89,7 +89,8 @@ def get_expected_output_tbl() -> list[F1A]:
     }
 
     for k, v in input_tbl.items():
-        uri = f"Function_1A?Borough={v.boro}&AddressNo={v.addrNo}&StreetName={v.stName}&DisplayFormat={False}&Key={key}"
+        uri = f"/Function_1A?Borough={v.boro}&ZipCode=&AddressNo={v.addrNo}&StreetName={v.stName}&TPAD=y&BrowseFlag=" \
+              f"&HNS=&Unit=&DisplayFormat={False}&Key={key}"
         response: Response = rq.get(url + uri)
 
         if response.status_code == 200:
