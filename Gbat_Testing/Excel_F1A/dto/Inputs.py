@@ -8,10 +8,11 @@ from dataclasses import dataclass
 
 @dataclass
 class f1a_input:
-    boro: str  # may be boro code or zip code
+    boro: str
     addrNo: str  # may be in hnd or hnd format
     stName: str  # may also be freeform (address no + st name) strings
     # optionals
+    zip: str = ""
     using_tpad: str = "y"
     browse_flag: str = "p"  # p, f, r, black
     unit: str = ""

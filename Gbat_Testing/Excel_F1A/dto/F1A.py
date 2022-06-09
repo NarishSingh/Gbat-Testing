@@ -154,3 +154,5 @@ class F1A:
         self.x_coord: str = response["root"]["wa2f1ax"]["x_coord"]
         self.y_coord: str = response["root"]["wa2f1ax"]["y_coord"]
         # endregion
+
+        self.similar_names_list: list[str] = get_similar_names_list(response)

@@ -119,3 +119,24 @@ def get_gridkey1(response: dict, wa2: str) -> str:
 def get_sanborn(response: dict, wa2: str) -> str:
     sb: dict = response["root"][wa2]["sanborn"]
     return f"{sb['boro']}{sb['page']}{sb['page_suffix']}{sb['volume']}{sb['volume_suffix']}"
+
+
+def get_similar_names_list(response: dict) -> list[str]:
+    """
+    Process the similar names list for an error response
+    :param response: dictionary with the deserialized response from geo
+    :return: list of strings with the similar name and b7sc
+    """
+    names: list[str] = response["root"]["wa1"]["out_stname_list"]
+    b7scs: list[str] = []
+
+    for b7 in response["root"]["wa1"]["out_b7sc_list"]:
+        b7scs.append(f"{b7['boro']}{b7['lgc']}{b7['sc5']}")
+
+    sim_names: list[str] = []
+
+    for i, name in enumerate(names):
+        sim_names.append(name)
+        sim_names.append(b7scs[i])  # name and b7sc list are guaranteed to be the same length
+
+    return sim_names

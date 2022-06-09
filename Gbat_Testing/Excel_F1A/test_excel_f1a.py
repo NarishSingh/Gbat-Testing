@@ -104,10 +104,32 @@ def get_expected_output_tbl() -> list[F1A]:
 
 
 @pytest.fixture
-def get_expected_error_tbl() -> list[list[str]]:
+def get_expected_error_tbl(get_expected_output_tbl) -> list[list[str]]:
     """
     Setup expected errata for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl"
     :return: List of string lists, each representing row data. First row is column headers
+    """
+    error_responses: list[F1A] = [err for err in get_expected_output_tbl if err.out_grc != "00" and err.out_grc != "01"]
+
+    error_list: list[list[str]] = [
+        ["ID", "Function Code", "Borough Code", "Borough Name", "In ZIP Code", "Address Number",
+         "Street or Place Name",
+         "Unit Input", "GRC", "Error Message", "Similar Name 1", "b7sc 1", "Similar Name 2", "b7sc 2",
+         "Similar Name 3",
+         "b7sc 3", "Similar Name 4", "b7sc 4", "Similar Name 5", "b7sc 5", "Similar Name 6", "b7sc 6",
+         "Similar Name 7",
+         "b7sc 7", "Similar Name 8", "b7sc 8", "Similar Name 9", "b7sc 9", "Similar Name 10", "b7sc 10"]
+    ]  # col heads
+
+    # error data
+    for err in error_responses:
+        row: list[str] = [err.ID, err.in_func_code, err.boro, "", err.in_zip_code, err.addrNo,
+                          err.stName, err.unit, err.out_grc, err.out_error_message]
+        row.extend(err.similar_names_list)
+
+        error_list.append(row)
+
+    return error_list
     """
     return [
         # tbl head
@@ -133,6 +155,7 @@ def get_expected_error_tbl() -> list[list[str]]:
          "",
          "", "", "", ""]
     ]
+    """
 
 
 # endregion
@@ -155,8 +178,8 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
         for cell in row:
             expected_row: F1A = expected[r]
             expected_col_head: Cell = col_heads[c]
-            # print(f"{cell.value} | [{r},{c}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
-            assert cell.value == getattr(expected_row, expected_col_head.value)
+            # print(f"{cell.value} | [{r + 2},{c + 1}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
+            assert cell.value or "" == getattr(expected_row, expected_col_head.value)  # null/None -> empty string
             c += 1
 
         r += 1
@@ -171,8 +194,8 @@ def test_error_f1a(get_expected_error_tbl, setup_f1a_error_tbl):
         c: int = 0  # col tracker
 
         for cell in row:
-            # print(f"{cell.value} | [{r},{c}] {expected[r][c]}")  # debug quick print
-            assert cell.value == expected[r][c]
+            print(f"{cell.value} | [{r + 2},{c + 1}] {expected[r][c]}")  # debug quick print
+            assert cell.value or "" == expected[r][c]  # null/None -> empty string
             c += 1
 
         r += 1
