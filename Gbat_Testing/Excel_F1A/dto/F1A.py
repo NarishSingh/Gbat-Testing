@@ -8,110 +8,120 @@ class f1a_input:
     stName: str
 
 
-def get_in_bbl(response) -> str:
+def get_in_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa1"]["in_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_out_bbl(response) -> str:
+def get_out_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa1"]["out_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_bbl(response) -> str:
+def get_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_tpad_new_bin(response) -> str:
+def get_tpad_new_bin(response: dict) -> str:
     new_bin: dict = response["root"]["wa2f1ax"]["TPAD_new_bin"]
     return f"{new_bin['boro']}{new_bin['binnum']}"
 
 
-def get_bid_id(response) -> str:
+def get_bid_id(response: dict) -> str:
     bid: dict = response["root"]["wa2f1ax"]["bid_id"]
     return f"{bid['boro']}{bid['sc5']}"
 
 
-def get_in_bin(response) -> str:
+def get_in_bin(response: dict) -> str:
     bin_dict: dict = response["root"]["wa1"]["in_bin"]
     return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
-def get_out_bin(response) -> str:
+def get_out_bin(response: dict) -> str:
     bin_dict: dict = response["root"]["wa1"]["out_bin"]
     return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
-def get_bin(response) -> str:
+def get_bin(response: dict) -> str:
     bin_dict: dict = response["root"]["wa2f1ax"]["bin"]
     return f"{bin_dict['boro']}{bin_dict['binnum']}"
 
 
-def get_business_area(response) -> str:
+def get_business_area(response: dict) -> str:
     ba: dict = response["root"]["wa2f1ax"]["business_area"]
     return f"{ba['boro']}{ba['district_number']}"
 
 
-def get_condo_base_bbl(response) -> str:
+def get_condo_base_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["condo_base_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_condo_bill_bbl(response) -> str:
+def get_condo_bill_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["condo_bill_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_condo_hi_bbl(response) -> str:
+def get_condo_hi_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["condo_hi_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_condo_lo_bbl(response) -> str:
+def get_condo_lo_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa2f1ax"]["condo_lo_bbl"]
     return f"{bbl['boro']}{bbl['block']}{bbl['lot']}"
 
 
-def get_dof_map(response) -> str:
+def get_dof_map(response: dict) -> str:
     dof: dict = response["root"]["wa2f1ax"]["dof_map"]
     return f"{dof['boro']}{dof['section_volume']}{dof['page']}"
 
 
-def get_gridkey1(response) -> str:
+def get_gridkey1(response: dict) -> str:
     gk: dict = response["root"]["wa2f1ax"]["gridkey1"]
     gk_b5sc: str = f"{gk['b5sc']['boro']}{gk['b5sc']['sc5']}"
     return f"{gk['record_type']}{gk_b5sc}{gk['parity']}{gk['hi_hns']}"
 
 
-def get_in_b10sc1(response):
+def get_in_b10sc1(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["in_b10sc1"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
-def get_in_b10sc2(response):
+def get_in_b10sc2(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["in_b10sc2"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
-def get_in_b10sc3(response):
+def get_in_b10sc3(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["in_b10sc3"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
-def get_out_b10sc1(response):
+def get_out_b10sc1(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["out_b10sc1"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
-def get_out_b10sc2(response):
+def get_out_b10sc2(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["out_b10sc2"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
 
 
-def get_out_b10sc3(response):
+def get_out_b10sc3(response: dict) -> str:
     b10: dict = response["root"]["wa1"]["out_b10sc3"]
     return f"{b10['boro']}{b10['sc5']}{b10['lgc']}{b10['spv']}"
+
+
+def get_out_units(response: dict) -> str:
+    unt: dict = response["root"]["wa1"]["out_units"]
+    return f"{unt['unit_type']}{unt['unit_identifier']}"
+
+
+def get_sanborn(response: dict) -> str:
+    sb: dict = response["root"]["wa2f1ax"]["sanborn"]
+    return f"{sb['boro']}{sb['page']}{sb['page_suffix']}{sb['volume']}{sb['volume_suffix']}"
 
 
 class F1A:
@@ -201,7 +211,7 @@ class F1A:
         self.out_stname2: str = response["root"]["wa1"]["out_stname2"]
         self.out_stname3: str = response["root"]["wa1"]["out_stname3"]
         self.out_unit: str = response["root"]["wa1"]["out_unit"]
-        self.out_units: str = response["root"]["wa1"]["out_units"]
+        self.out_units: str = get_out_units(response)
         self.out_warning_code: str = response["root"]["wa1"]["out_warning_code"]
         self.out_warning_code2: str = response["root"]["wa1"]["out_warning_code2"]
         # endregion
@@ -255,7 +265,7 @@ class F1A:
         self.res_internal_use: str = response["root"]["wa2f1ax"]["res_internal_use"]
         self.rpad_bldg_class: str = response["root"]["wa2f1ax"]["rpad_bldg_class"]
         self.rpad_scc: str = response["root"]["wa2f1ax"]["rpad_scc"]
-        self.sanborn: str = response["root"]["wa2f1ax"]["sanborn"]
+        self.sanborn: str = get_sanborn(response)
         self.stroll_key: str = response["root"]["wa2f1ax"]["stroll_key"]
         self.vacant_flag: str = response["root"]["wa2f1ax"]["vacant_flag"]
         self.warning_code: str = response["root"]["wa2f1ax"]["warning_code"]
