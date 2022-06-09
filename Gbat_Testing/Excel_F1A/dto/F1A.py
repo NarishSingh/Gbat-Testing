@@ -1,4 +1,6 @@
-from Excel_F1A.dto.Input_Structs import f1a_input
+# Deserialization container for expected json response - F1A only
+
+from Excel_F1A.dto.Inputs import f1a_input
 from Excel_F1A.dto.Str_Helper import *
 
 

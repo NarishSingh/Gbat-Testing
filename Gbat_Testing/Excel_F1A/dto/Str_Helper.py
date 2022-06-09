@@ -1,3 +1,6 @@
+# Many return fields in json response come back as internal dictionaries
+# This class aims to "flatten" them into one string, which is how desktop gbat processes them before persistence
+
 # region WA1
 def get_in_bbl(response: dict) -> str:
     bbl: dict = response["root"]["wa1"]["in_bbl"]

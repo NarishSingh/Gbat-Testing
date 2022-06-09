@@ -7,7 +7,7 @@ from openpyxl.cell import Cell
 from openpyxl.worksheet import worksheet
 from requests import Response
 from Excel_F1A.dto.F1A import F1A
-from Excel_F1A.dto.Input_Structs import f1a_input
+from Excel_F1A.dto.Inputs import f1a_input
 
 
 # region ARRANGE
