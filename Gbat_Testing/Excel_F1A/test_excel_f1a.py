@@ -1,5 +1,4 @@
 import json
-from dataclasses import dataclass
 import openpyxl as xl
 import pytest
 import requests as rq
@@ -7,8 +6,8 @@ from openpyxl import Workbook
 from openpyxl.cell import Cell
 from openpyxl.worksheet import worksheet
 from requests import Response
-
 from Excel_F1A.dto.F1A import F1A
+from Excel_F1A.dto.Input_Structs import f1a_input
 
 
 # region ARRANGE
@@ -67,36 +66,6 @@ def setup_f1a_complete_bins_tbl(get_workbook) -> worksheet:
     f1a: Workbook = get_workbook
     bins_sheets: list[str] = [name for name in f1a.sheetnames if "Complete_BIN" in name]
     return f1a[bins_sheets[-1]]
-
-
-"""
-@pytest.fixture
-def get_expected_output_tbl() -> list[list[str]]:
-    "\""
-    Setup expected results for an excel batch job querying "boro", "addrNo", "stName", "out_grc", "bbl" from the output
-    tbl
-    :return: List of string lists, each representing row data. First row is column headers
-    "\""
-    return [
-        # tbl head
-        ["ID", "boro", "addrNo", "stName", "out_grc", "bbl"],
-        # return data
-        ["1", "1", "120", "Broadway", "00", "1000477501"],
-        ["2", "1", "140", "Broadway", "00", "1000480001"],
-        ["3", "1", "695", "Park Ave", "00", "1014030001"],
-        ["4", "4", "90-15", "queens blvd", "00", "4018600100"],
-        ["5", "4", "13118", "liberty ave", "01", "4095910006"],
-        ["6", "3", "20", "Fort Greene Pl", "00", "3020970048"],
-        ["7", "3", "620", "Atlantic Ave", "00", "3011180001"]
-    ]
-"""
-
-
-@dataclass
-class f1a_input:
-    boro: str
-    addrNo: str
-    stName: str
 
 
 @pytest.fixture
@@ -186,7 +155,7 @@ def test_output_f1a(get_expected_output_tbl, setup_f1a_output_tbl):
         for cell in row:
             expected_row: F1A = expected[r]
             expected_col_head: Cell = col_heads[c]
-            print(f"{cell.value} | [{r},{c}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
+            # print(f"{cell.value} | [{r},{c}] {getattr(expected_row, expected_col_head.value)}")  # debug quick print
             assert cell.value == getattr(expected_row, expected_col_head.value)
             c += 1
 
