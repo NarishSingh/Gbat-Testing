@@ -7,7 +7,7 @@ from openpyxl.cell import Cell
 from openpyxl.worksheet import worksheet
 from requests import Response
 from Excel_F1A.dto.F1A import F1A
-from Excel_F1A.dto.Inputs import f1a_input
+from Excel_F1A.dto.Inputs import F1aInput
 
 
 # region ARRANGE
@@ -76,16 +76,16 @@ def get_expected_output_tbl() -> list[F1A]:
 
     # k: id as int, v: input struct with expected input data (will be copied to front of output tbl if user chooses)
     input_tbl: dict = {
-        1: f1a_input("1", "120", "Broadway"),
-        2: f1a_input("1", "140", "Broadway"),
-        3: f1a_input("1", "695", "Park Ave"),
-        4: f1a_input("4", "90-15", "queens blvd"),
-        5: f1a_input("4", "13118", "liberty ave"),
-        6: f1a_input("3", "20", "Fort Greene Pl"),
-        7: f1a_input("3", "620", "Atlantic Ave"),
-        8: f1a_input("er", "err", "err"),
-        9: f1a_input("3", "951", "err3"),
-        10: f1a_input("1", "120", "bwa"),
+        1: F1aInput("1", "120", "Broadway"),
+        2: F1aInput("1", "140", "Broadway"),
+        3: F1aInput("1", "695", "Park Ave"),
+        4: F1aInput("4", "90-15", "queens blvd"),
+        5: F1aInput("4", "13118", "liberty ave"),
+        6: F1aInput("3", "20", "Fort Greene Pl"),
+        7: F1aInput("3", "620", "Atlantic Ave"),
+        8: F1aInput("er", "err", "err"),
+        9: F1aInput("3", "951", "err3"),
+        10: F1aInput("1", "120", "bwa"),
     }
 
     for k, v in input_tbl.items():
@@ -93,7 +93,7 @@ def get_expected_output_tbl() -> list[F1A]:
               f"&HNS=&Unit=&DisplayFormat={False}&Key={key}"
         response: Response = rq.get(url + uri)
 
-        if response.status_code == 200:
+        if response.status_code == 200:  # 200 OK -> Geo was able to process request
             f1a_json = json.loads(response.content)
             f1a: F1A = F1A(str(k), v, f1a_json)
             response_list.append(f1a)

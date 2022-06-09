@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class f1a_input:
+class F1aInput:
     boro: str
     addrNo: str  # may be in hnd or hnd format
     stName: str  # may also be freeform (address no + st name) strings
@@ -19,17 +19,17 @@ class f1a_input:
 
 
 @dataclass
-class f1b_input:
+class F1bInput:
     pass
 
 
 @dataclass
-class f1e_input:
+class F1eInput:
     pass
 
 
 @dataclass
-class fap_input:
+class FapInput:
     pass
 
 

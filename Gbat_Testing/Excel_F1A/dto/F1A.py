@@ -1,11 +1,11 @@
 # Deserialization container for expected json response - F1A only
 
-from Excel_F1A.dto.Inputs import f1a_input
+from Excel_F1A.dto.Inputs import F1aInput
 from Excel_F1A.dto.Str_Helper import *
 
 
 class F1A:
-    def __init__(self, ID: str, input: f1a_input, response: dict):
+    def __init__(self, ID: str, input: F1aInput, response: dict):
         wa2: str = "wa2f1ax"
 
         self.ID: str = ID
